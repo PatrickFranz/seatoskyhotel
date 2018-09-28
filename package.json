@@ -1,0 +1,28 @@
+{
+  "name": "sea_to_sky_hotel_website",
+  "version": "1.0.0",
+  "description": "A website for the Sea To Sky Hotel in Squamish, BC",
+  "main": "src/index.html",
+  "scripts": {
+    "build-task:scss-compile": "node-sass-chokidar --source-map true src/scss/ -o dist/css",
+    "build-task:autoprefixer": "postcss dist/css/*.css --use autoprefixer -d dist/css",
+    "sass:build": "npm-run-all -p build-task:*",
+    "sass:watch": "chokidar 'src/scss/**/*.scss' -c 'npm run sass:build'",
+    "serve": "browser-sync start -s -f . --no-notify --host $LOCAL_IP --port 9000",
+    "dev": "npm-run-all -p serve sass:*"
+  },
+  "author": "Patrick Franz",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^9.1.5",
+    "chokidar-cli": "^1.2.1",
+    "handlebars": "^4.0.12",
+    "npm-run-all": "^4.1.3",
+    "postcss-cli": "^6.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.0",
+    "browsersync": "0.0.1-security",
+    "node-sass": "^4.9.3"
+  }
+}
