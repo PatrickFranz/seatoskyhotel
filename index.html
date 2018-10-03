@@ -4,10 +4,70 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" 
+      type="image/png" 
+      href="src/img/favicon.ico">
+  <link rel="stylesheet" href="dist/css/grid.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">   
+   <!--[if lte IE 8]>
+      <link rel="stylesheet" href="dist/css/grid-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+      <link rel="stylesheet" href="dist/css/grid.css">
+  <!--<![endif]-->
+  <link rel="stylesheet" 
+        href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" 
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" 
+        crossorigin="anonymous">
+
+  <link rel="stylesheet" href="dist/css/main.css">
+  <script type='text/javascript' src='node_modules/handlebars/dist/handlebars.min.js'></script>
   <title>Sea To Sky Hotel</title>
 </head>
 <body>
-  Bonjour!
-  <div id="main"></div>
+  <div class="headerContainer">
+      <header class='pure-g'>
+        <div class="logo pure-u-1-2">
+          <img 
+               src="src/img/logo_100x100.png" 
+               alt="Sea To Sky Hotel logo">
+          <span class='logo-text'>
+            Sea To Sky Hotel &
+            <br>
+            Conference Center
+          </span>
+        </div>
+        <div class="header-right pure-u-1-2">
+          <button class='btn-pill-md'>Menu</button>
+          <button class='btn-pill-md'>Language</button>
+          <button class='btn-pill-md'>Book Now</button>
+        </div>
+      </header>
+      <div class="pure-menu pure-menu-horizontal">
+          <a href="#" class="pure-menu-heading pure-menu-link">Explore</a>
+          <ul class="pure-menu-list">
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Rooms</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Facilities</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Gallery</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Attractions</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Beer & Wine Store</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Contact Us</a></li>
+          </ul>
+      </div>
+      <div class="carousel pure-u-1">
+
+      </div>
+  </div>
+  <script id='hbs_header' type="x-handlebars-template">
+    {{!Container for Header/Nav/Carousel}}
+  </script>
+  <script id='hbs_body' type="x-handlebars-template">
+    <p>body</p>
+  </script>
+  <script id='hbs_footer' type="x-handlebars-template">
+    <p>footer</p>
+  </script>
+  
+  <script src='src/js/handlebars_template.js'></script>
 </body>
 </html>

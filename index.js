@@ -1,3 +1,0 @@
-require('handlebars');
-
-echo("Hello!");

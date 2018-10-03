@@ -1,0 +1,20 @@
+/* HEADER START */
+.headerContainer{
+  padding: 1rem;
+
+  .logo{
+    position: relative;
+
+    .logo-text{
+      font-size: 1.5rem;
+      position: absolute;
+      top: 1rem;
+      padding: 0 10px;
+    }
+  }
+  .header-right{
+    text-align: right;
+  }
+}
+
+/* HEADER END */

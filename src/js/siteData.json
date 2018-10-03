@@ -1,0 +1,14 @@
+{
+  "general" : {
+    "title" : "Sea To Sky Hotel",
+    "address-1" :  "",
+    "address-2" :  "",
+    "city" : "Squamish",
+    "prov-full" : "British Columbia",
+    "prov-abbr": "B.C."
+  },
+
+  "header" : {
+      
+  } 
+}

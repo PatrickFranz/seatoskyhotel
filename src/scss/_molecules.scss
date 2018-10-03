@@ -1,0 +1,16 @@
+.btn-pill{
+  background: none;
+  border-radius: 15px;
+  border-color: black;
+}
+
+.btn-pill-md{
+  @extend .btn-pill;
+  font-size: 1.25em;
+  padding: 10px 15px;
+}
+.btn-pill-lg{
+  @extend .btn-pill;
+  font-size: 1.5em;
+  padding: 15px 25px;
+}
