@@ -1,0 +1,13 @@
+.carousel{
+  position: absolute;
+  top: 0;
+  left: 0;  
+  z-index: -1;
+
+  .image-container{
+    overflow: hidden;
+    max-width: 100vw;
+    max-height: 40vw;
+    // background-size: contain;
+  }
+}
