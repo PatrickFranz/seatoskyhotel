@@ -1,0 +1,13 @@
+/* Variables */
+  $blue: #005da0;
+  $green: #4d9d48;
+  $yellow: #ffd006;
+
+  $black: #111;
+  $white: #fff;
+  $grayBack: rgba(232, 236, 241, 1);
+
+  body{
+    background-color: $grayBack;
+    overflow-x: hidden;
+  }

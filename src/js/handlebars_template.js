@@ -23,3 +23,4 @@ Handlebars.registerHelper('linkReplace', (originalText, url, textToReplace, repl
   const link = `<a href="${url}">${replacementText}</a>`;
   return originalText.replace(textToReplace, url);
 });
+

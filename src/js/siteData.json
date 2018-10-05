@@ -9,6 +9,23 @@
   },
 
   "header" : {
-      
-  } 
+      "logoImg": "logo_100x100.png",
+      "logoTextLine1": "Sea To Sky Hotel &",
+      "logoTextLine2": "Conference Center"
+  },
+  "headerMenu": {
+    "menuText": "menu",
+    "chooseLangText": "language",
+    "bookRoomText": "book now"
+  },
+  "nav": {
+    "menuItems" : [
+      {"item": "rooms", "linkTo": "#"},
+      {"item": "facilities", "linkTo": "#"},
+      {"item": "gallery", "linkTo": "#"},
+      {"item": "attractions", "linkTo": "#"},
+      {"item": "beer & wine store", "linkTo": "#"},
+      {"item": "contact us", "linkTo": "#"}
+    ]
+  }
 }

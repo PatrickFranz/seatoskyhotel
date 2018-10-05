@@ -1,0 +1,13 @@
+.main-content{
+  position: absolute;
+  top: 85vh;
+  width: 100vw;
+
+  .content-group{
+    width: 80vw;
+    background: $white;
+    margin: 0 auto;
+    padding: 2rem 3rem;
+  }
+
+}
