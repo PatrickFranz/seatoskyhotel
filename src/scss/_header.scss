@@ -1,8 +1,9 @@
 /* HEADER START */
-.headerContainer{
-  padding: 1rem;
+.header-container{
+  padding: 15px;
   color: $white;
   user-select: none;
+  height: 85vh;
 
   .logo{
     position: relative;
@@ -15,8 +16,30 @@
     }
   }
   .header-right{
+    padding: 10px;
     text-align: right;
+    font-size: 1.25rem;
     
+    .phone-number-text{
+      font-size: 1.1rem;
+      margin-right: 10px;
+      font-weight: bold;
+    }
+    .menu-btn{
+      display: none;
+    }
+    @media(max-width: 1024px){
+      .menu-btn{
+        display: inline-block;
+      }
+      .phone-number-text{
+        display: none;
+      }
+      font-size: 1rem;
+    }
+    @media(max-width: 700px){
+      
+    }
   }
 }
 

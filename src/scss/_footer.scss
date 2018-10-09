@@ -1,0 +1,31 @@
+footer{
+    width: 100vw;
+    color: $white;
+    
+    .footer-content{
+      width: 90vw;
+      background: $black;
+      margin: 0 auto;
+      padding: 2rem 3rem 5rem;
+      line-height: 1.75;
+
+      .location-container{
+        
+        .name{
+          font-size: 1.25rem;
+          padding-right: 4rem;
+          border-bottom: 3px solid $white;
+          margin-bottom: 1.5rem;
+        }
+       
+        p{
+          margin: 1px;
+          line-height: 1.5;
+        }
+      }
+      
+      @media(max-width:960px){
+        padding: 2rem 1rem 7rem;
+      }
+    }
+}

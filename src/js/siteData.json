@@ -5,7 +5,8 @@
     "address-2" :  "",
     "city" : "Squamish",
     "prov-full" : "British Columbia",
-    "prov-abbr": "B.C."
+    "prov-abbr": "B.C.",
+    "phone-number": "1-800-531-1530"
   },
 
   "header" : {

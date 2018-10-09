@@ -1,5 +1,6 @@
-const mainContainer = document.querySelector('body');
-const headerContainer = document.querySelector('.headerContainer');
+const hbsHeaderContainer = document.querySelector('.hbs-header');
+const hbsContentContainer = document.querySelector('.hbs-main-content');
+const hbsFooterContainer = document.querySelector('.hbs-footer');
 
 const header_src = document.querySelector("#hbs_header").innerHTML;
 const body_src = document.querySelector("#hbs_body").innerHTML;
@@ -12,9 +13,12 @@ const footer_template = Handlebars.compile(footer_src);
 const json = fetch('src/js/siteData.json')
   .then( resp => resp.json())
   .then( json => {
-    headerContainer.innerHTML += header_template(json);
-    mainContainer.innerHTML += body_template(json);
-    mainContainer.innerHTML += footer_template(json);
+    hbsHeaderContainer
+      .insertAdjacentHTML('beforeend', header_template(json));
+    hbsContentContainer.
+      insertAdjacentHTML('beforeend',body_template(json));
+    hbsFooterContainer.
+      insertAdjacentHTML('beforeend',footer_template(json));
 
   })
   // .then( () => init() ) 

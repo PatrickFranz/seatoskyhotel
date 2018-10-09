@@ -5,7 +5,13 @@
 
   $black: #111;
   $white: #fff;
-  $grayBack: rgba(232, 236, 241, 1);
+  $grayBack: #8395a7;
+  $grayContent: lighten(#c8d6e5, 10%);
+
+  *{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  }
 
   body{
     background-color: $grayBack;

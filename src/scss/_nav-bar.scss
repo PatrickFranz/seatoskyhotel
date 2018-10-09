@@ -6,9 +6,10 @@
   @media (min-width: 1024px){
     display: block;
   }
-
+  
   
   .pure-menu-link{
+    letter-spacing: 1 !important;
     background: none;
     border-radius: 12px;
     color: lighten($white, 10%);
