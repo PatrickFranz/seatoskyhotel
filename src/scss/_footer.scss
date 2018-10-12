@@ -1,4 +1,7 @@
 footer{
+  *{
+    // border: 1px solid white;
+  }
     width: 100vw;
     color: $white;
     
@@ -9,19 +12,30 @@ footer{
       padding: 2rem 3rem 5rem;
       line-height: 1.75;
 
+      .heading{
+        font-size: 1.25rem;
+        white-space: nowrap;
+        margin-right: 20%;
+        border-bottom: 3px solid $white;
+        margin-bottom: 1.5rem;
+
+      }
+      
+      p{
+        margin: 1px;
+        line-height: 1.5;
+      }
+
       .location-container{
-        
-        .name{
-          font-size: 1.25rem;
-          padding-right: 4rem;
-          border-bottom: 3px solid $white;
-          margin-bottom: 1.5rem;
+
+        .icons p{
+          display: block;
+          text-align: center;
         }
-       
-        p{
-          margin: 1px;
-          line-height: 1.5;
-        }
+      }
+
+      .partner-logos{
+        padding: 10px;
       }
       
       @media(max-width:960px){

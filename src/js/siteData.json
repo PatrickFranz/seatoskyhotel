@@ -1,12 +1,17 @@
 {
   "general" : {
     "title" : "Sea To Sky Hotel",
-    "address-1" :  "",
-    "address-2" :  "",
+    "address-1" : "40330 Tantalus Road",
+    "address-2" : "P.O. Box 310",
     "city" : "Squamish",
+    "postal": "VON 1TO",
     "prov-full" : "British Columbia",
     "prov-abbr": "B.C.",
-    "phone-number": "1-800-531-1530"
+    "country": "Canada",
+    "toll-free-phone-number": "1-800-531-1530",
+    "phone-number": "1-604-898-4874",
+    "email": "info@seatoshyhotel.com"
+
   },
 
   "header" : {
@@ -17,7 +22,7 @@
   "headerMenu": {
     "menuText": "menu",
     "chooseLangText": "language",
-    "bookRoomText": "book now"
+    "bookRoomText": "reservations"
   },
   "nav": {
     "menuItems" : [
@@ -27,6 +32,35 @@
       {"item": "attractions", "linkTo": "#"},
       {"item": "beer & wine store", "linkTo": "#"},
       {"item": "contact us", "linkTo": "#"}
+    ]
+  },
+  "footer":{
+    "partnerLogos": [
+      {
+        "name": "BCAA Travel",
+        "logo": "src/img/trvllogo_11550.png",
+        "linkTo": "http://www.bcaa.com/travel"
+      },
+      {
+        "name": "Squamish Chamber of Commerce",
+        "logo": "src/img/chamber_logo.png",
+        "linkTo": "http://www.bcaa.com/travel"
+      },
+      {
+        "name": "Canada Select",
+        "logo": "src/img/canadaselect.gif",
+        "linkTo": "http://www.canadaselect.com/british-columbia/vancouver-coast-mountains"
+      },
+      {
+        "name": "AAA",
+        "logo": "src/img/aaacaa.gif",
+        "linkTo": "http://www.aaa.com/"
+      },
+      {
+        "name": "Aeroplan",
+        "logo": "src/img/aeroplan-logo.png",
+        "linkTo": "http://www.aeroplan.com/"
+      }
     ]
   }
 }

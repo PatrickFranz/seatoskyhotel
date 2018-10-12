@@ -1,3 +1,5 @@
+// var picker = new Pikaday({ field: document.getElementById('datepicker') });
+
 const hbsHeaderContainer = document.querySelector('.hbs-header');
 const hbsContentContainer = document.querySelector('.hbs-main-content');
 const hbsFooterContainer = document.querySelector('.hbs-footer');
@@ -23,8 +25,14 @@ const json = fetch('src/js/siteData.json')
   })
   // .then( () => init() ) 
 
+
 Handlebars.registerHelper('linkReplace', (originalText, url, textToReplace, replacementText = 'here') => {
   const link = `<a href="${url}">${replacementText}</a>`;
   return originalText.replace(textToReplace, url);
+});
+
+Handlebars.registerHelper('getDate', (offset=0) => {
+  const d = new Date();
+  return new Handlebars.SafeString(`${d.getDate()}`);
 });
 

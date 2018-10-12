@@ -1,9 +1,12 @@
 /* HEADER START */
 .header-container{
-  padding: 15px;
   color: $white;
   user-select: none;
   height: 85vh;
+
+  .logo-bar{
+    padding: 15px;
+  }
 
   .logo{
     position: relative;
