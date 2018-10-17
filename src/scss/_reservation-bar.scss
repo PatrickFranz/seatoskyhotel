@@ -1,43 +1,71 @@
 .res-bar{
-  background: $dk-blue;
-  color: $white;
+  position: absolute;
+  display: grid;
+  top: 75%;
+  padding: 1rem;
   width: 100vw;
-
+  @media(max-width: 1024px){
+    justify-content: right;
+    top: 75px;
+  }
+  
   .res-container{
-    width: 100vw;
-    padding: 0 3rem;
-    line-height: 1.75;
-    margin: 1rem auto;
+    width: 60vw;
+    background: $dk-blue;
+    color: $white;
+    padding: 0;
+    line-height: 1;
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 0px 9px 55px -17px rgba(0,0,0,0.65);
+    
+    @media(max-width: 1024px){
+      width: 30vw;
+    }
+    
 
     .heading{
       text-transform: uppercase;
       line-height: 1;
-      font-size: 2rem;
-      white-space: nowrap;
-      border-bottom: 3px solid $white;
-      
+      font-size: 1.1rem;
+      white-space: nowrap;      
     }
     
     .date-finder{
       text-align: right;
       font-size: 1.25rem;
+      padding: 10px;
       
-      @media (max-width: 1024px){
-        margin-top: 2rem;
+      @media (max-width: 1260px){
+        font-size: 1rem;
       }
 
-      .el-date-pick{
-        margin: 0 10px;
+      .el-date-pick, .el-room-pick{
         padding: 5px 0;
+        margin: 0 10px;
         border-bottom: 3px solid $white;
+        white-space: nowrap;
+
+
+        label{
+          font-size: 0.8em;
+          display: block;
+          text-align: left;
+          padding-bottom: 5px;
+
+        }
+        select{
+          background: $dk-blue;
+          color: $white;
+          border: none;
+          outline: none;
+          margin-top: 3px;
+        }
  
         input{
-          padding: 2px;
           border: none;
           background: transparent;
           outline: none;
-          max-width: 30%;
-          
           @media (max-width: 960px){
             font-size: 1rem
           }
@@ -45,12 +73,11 @@
       }
 
       button{
-        margin-left: 20px;
         padding-left: 20px;
         padding-right: 20px;
-        max-width: 30%;
-        @media (max-width: 960px){
-          font-size: 1rem
+        @media (max-width: 1024px){
+          font-size: 0.8em;
+          margin: 1rem;
         }
       }
     }

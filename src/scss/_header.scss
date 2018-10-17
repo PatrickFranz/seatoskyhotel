@@ -1,4 +1,14 @@
 /* HEADER START */
+
+@font-face {
+  font-family: 'bodoni';
+  src: url('bodoniflf-roman-webfont.woff2') format('woff2'),
+       url('bodoniflf-roman-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
 .header-container{
   color: $white;
   user-select: none;
@@ -6,13 +16,15 @@
 
   .logo-bar{
     padding: 15px;
+    width: 100vw;
   }
 
   .logo{
     position: relative;
 
     .logo-text{
-      font-size: 1.5rem;
+      font-family: 'bodoni', serif;
+      font-size: 2rem;
       position: absolute;
       top: 1rem;
       padding: 0 10px;

@@ -1,0 +1,269 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" 
+        type="image/png" 
+        href="img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Vidaloka" rel="stylesheet">
+
+    <!-- PureCSS -->
+      <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">    
+      <!--[if lte IE 8]>
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-old-ie-min.css">
+      <![endif]-->
+      <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
+      <!--<![endif]-->
+    <!-- PureCSS END-->
+
+    <link rel="stylesheet" 
+          href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" 
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" 
+          crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/main.css">
+    <script type='text/javascript' src='js/handlebars.min.js'></script>
+    <title>Sea To Sky Hotel</title>
+  </head>
+  <body>
+    <div class="hbs-header">   
+      <div class="res-bar">
+
+        
+          <div class="res-container pure-g">
+            <div class="date-finder pure-u-1">
+              <div class="pure-g">
+                <span class='pure-u-1 pure-u-lg-1-4 '>
+                  <div class='el-date-pick'>
+                    <label for="checkin-date">Check In</label>
+                    <i class="far fa-calendar-alt"></i>
+                    <input id="checkin-date" class="datepicker" type="date">
+                  </div>
+                </span>
+                <span class='pure-u-1 pure-u-lg-1-4'>
+                  <div class='el-date-pick'>
+                    <label for="checkout-date">Check Out</label>
+                    <i class="far fa-calendar-alt"></i>
+                    <input id="checkout-date" class="datepicker" type="date">
+                  </div>
+                </span>
+                <span class='pure-u-1 pure-u-lg-1-4'>
+                  <div class='el-room-pick'>
+                    <label for="checkout-date">Room Type</label>
+                    <i class="fa fa-hotel"></i>
+                    <select name="room-select" id="room-select">
+                      <option value="deluxe">Deluxe</option>
+                      <option value="family">Deluxe Family</option>
+                      <option value="suite">One Bedroom Suite</option>
+                    </select>
+                  </div>
+                </span>
+                <span class="pure-u-0 pure-u-lg-1-8"></span>
+                <button class='pure-u-1 pure-u-lg-1-8 btn-pill-md'>Search</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      <script id='hbs_header' type="x-handlebars-template">
+        <!-- {{!Container for Header/Nav/Carousel}} -->
+
+        <header class='header-container pure-g'>
+          
+
+            <div class="logo-bar">
+
+              <div class="logo pure-u-1-2">
+                <img 
+                    src="img/{{header.logoImg}}" 
+                    alt="{{general.title}} logo">
+                <span class='logo-text'>
+                  {{header.logoTextLine1}}
+                  <br>
+                  {{header.logoTextLine2}}
+                </span>
+              </div>
+              <div class="header-right pure-u-1-2">
+                <span class='phone-number-text'><i class="fas fa-phone fa-flip-horizontal"></i>&nbsp;{{general.phone-number}}</span>
+                <button class='menu-btn btn-pill-md'><i class="fas fa-bars"></i>{{headerMenu.menuText}}</button>
+                <button class='lang-btn btn-pill-md'><i class="fas fa-globe-americas"></i>{{headerMenu.chooseLangText}}</button>
+                <button class='book-btn btn-pill-md'>{{headerMenu.bookRoomText}}</button>
+              </div>
+            
+          
+          <div class="pure-u-1">
+            <div class="pure-menu pure-menu-horizontal">
+                <a href="#" class="pure-menu-heading pure-menu-link">Explore <i class="fas fa-angle-right"></i></a>
+                <ul class="pure-menu-list">
+                  <li class="pure-menu-item"><a href="#" class="pure-menu-link">Rooms</a></li>
+                  <li class="pure-menu-item"><a href="#" class="pure-menu-link">Facilities</a></li>
+                  <li class="pure-menu-item"><a href="#" class="pure-menu-link">Gallery</a></li>
+                  <li class="pure-menu-item"><a href="#" class="pure-menu-link">Attractions</a></li>
+                  <li class="pure-menu-item"><a href="#" class="pure-menu-link">Beer & Wine Store</a></li>
+                  <li class="pure-menu-item"><a href="#" class="pure-menu-link">Contact Us</a></li>
+                </ul>
+            </div>
+          </div>
+          <div class="carousel pure-u-1">
+            <div class="image-container">
+              <img src="img/cloudyHoweSound-1-2.jpg" alt="Beautiful Howe Sound">
+            </div>
+          </div>
+        </div>
+        
+        </header>
+      </script>
+    </div>
+
+        <!-- Blank content block to use
+        <div class="content-container">
+            <div class="content-group pure-g">
+                <div class="c-headline pure-u-1-4">
+                  <p class="c-headline-1">{{headline1}}</p>
+                  <p class="c-headline-2">{{headline2}}</p>
+                </div>
+                <div class="c-content-text pure-u-3-4">
+                  {{!content here}}
+                </div>
+              </div>
+        </div> -->
+    
+ 
+    
+    <div class="hbs-main-content">
+      <script id='hbs_body' type="x-handlebars-template">
+        <div class="content-container">
+
+            <div class="content-group pure-g extra-padding-bottom">
+              <div class="c-headline pure-u-1 pure-u-lg-1-4">
+                <p class="c-headline-1">Sea to Sky</p>
+                <p class="c-headline-2">Hotel</p>
+              </div>
+              <div class="c-content-text pure-u-1 pure-u-lg-3-4">
+                <p>
+                  The Sea to Sky Hotel is nestled in the Garibaldi Provincial Park on the Sea to Sky Hwy, a few minutes north of Squamish,  70 km away from Vancouver B.C. and 30 minutes drive to Whistler, the North America’s foremost all year-round mountain resort. Outside our doors are unlimited attractions, outdoor activities, and shopping.
+                </p>
+              </div>
+            </div>
+
+            <div class="content-group pure-g extra-padding-bottom">
+                <div class="c-headline pure-u-1 pure-u-lg-1-4">
+                  <p class="c-headline-1">Rooms</p>
+                  <p class="c-headline-2"></p>
+                </div>
+                <div class="c-content-text pure-u-1 pure-u-lg-3-4">
+                  <p>
+                      All of our 50 oversized guest rooms and suites are tastefully decorated with stunning mountain views and are suitable for groups and events, business or pleasurable romantic getaway.
+                  </p>
+                </div>
+                <div class="images-container pure-g">
+                  <div class="pure-u-1">
+                    <img src="img/deluxeRoom-2.jpg" alt="" class="c-image">
+                    <img src="img/deluxeFamilyRoom-2.jpg" alt="" class="c-image">
+                    <img src="img/deluxeSuite-2.jpg" alt="" class="c-image">
+                  </div>
+                </div>   
+            </div>
+            
+            <div class="content-group blue-back pure-g">
+                <div class="c-headline pure-u-1 pure-u-lg-1-4">
+                  <p class="c-headline-1">Location</p>
+                  <p class="c-headline-2"></p>
+                </div>
+                <div class="c-content-text pure-u-1 pure-u-lg-3-4">
+                  <span class="locationMap">
+                    <a href="https://goo.gl/maps/EGsGS2gxYdT2" target="_blank">
+                      <img src="img//locationMap.jpg" alt="">
+                    </a>
+                  </span>
+                </div>
+              </div>
+            
+            <div class="content-group pure-g extra-padding-bottom">
+                <div class="c-headline pure-u-1 pure-u-lg-1-4">
+                  <p class="c-headline-1">
+                    Amenities
+                  </p>
+                  <p class="c-headline-2">
+                  </p>
+                </div>
+                <div class="c-content-text pure-u-1 pure-u-lg-3-4">
+                  <p>
+                      The Sea to Sky Hotel offers an array of amenities that ensure convenience as well as luxury. Along with well-appointed guest rooms and suites, the Sea to Sky Hotel offers guests:
+                  </p>
+                </div>
+              </div>
+          </div>  
+      </script>
+    </div>
+
+    <div class="hbs-footer">
+      <script id='hbs_footer' type="x-handlebars-template">
+        <footer class="pure-g">
+          <div class="footer-content pure-u-1">
+            <div class="pure-g">
+              <div class="location-container pure-u-1 pure-u-lg-1-3">
+                <p class="heading">Sea To Sky Hotel</p>
+                <div class="pure-g">
+                  <div class="icons pure-u-1-6">
+                    <p class="fas fa-phone fa-flip-horizontal"></p>
+                    <p class="fas fa-phone fa-flip-horizontal"></p>
+                    <p class="fas fa-map-marker-alt"></p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p class="fas fa-at"></p>
+                  </div>
+                  <div class="pure-u-5-6">
+                    <p class='phone-number-text'>{{general.toll-free-phone-number}}</p>
+                    <p class='phone-number-text'>{{general.phone-number}}</p>
+                    <p>{{general.address-1}}</p>
+                    <p>{{general.city}}, {{general.prov-full}}</p>
+                    <p>{{general.country}}</p>
+                    <p>{{general.postal}}</p>
+                    <p>{{general.email}}</p>
+                  </div>
+                </div>
+              </div>
+              <div class="vendor-partners pure-u-1 pure-u-lg-1-3">
+                <div class="pure-g">
+                  <div class="pure-u-1">
+                    <p class="heading">Partners</p>
+                    <div class="partner-logos pure-g">
+                      <!-- Array of logos with links -->
+                      {{#each footer.partnerLogos}}
+                        <div class="pure-u-1-3 pure-u-lg-1-2"
+                          <a href="{{this.linkTo}}" target="_blank"> 
+                            <img src="{{this.logo}}" alt="{{this.name}} logo">
+                          </a>
+                        </div>
+                        {{/each}}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pure-u-1 pure-u-lg-1-3">
+                <div class="pure-g">
+                  <div class="pure-u-1">
+                    <p class="heading">Links</p>
+                      <a href="#">
+                        SiteMap
+                      </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </script>
+    </div>
+            
+    </div>
+    <!-- <script src="pikaday.js"></script> -->
+    <script src='js/handlebars_template.js'></script>
+    <script src='js/main.js'></script>
+  </body>
+  </html>
