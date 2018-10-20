@@ -22,8 +22,7 @@ const json = fetch('js/siteData.json')
     hbsFooterContainer.
       insertAdjacentHTML('beforeend',footer_template(json));
 
-  })
-  // .then( () => init() ) 
+  }).then( () => init() ) 
 
 
 Handlebars.registerHelper('linkReplace', (originalText, url, textToReplace, replacementText = 'here') => {

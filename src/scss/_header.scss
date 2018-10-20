@@ -30,10 +30,29 @@
       padding: 0 10px;
     }
   }
+
   .header-right{
     padding: 10px;
     text-align: right;
     font-size: 1.25rem;
+
+    @media(max-width: 960px){
+      .text-buttons{
+        display: none;
+      }
+      .icon-buttons{
+        display: inline-block;
+      }
+    }
+
+    @media(min-width: 600px){
+      .text-buttons{
+        display: inline-block;
+      }
+      .icon-buttons{
+        display: none;
+      }
+    }
     
     .phone-number-text{
       font-size: 1.1rem;
@@ -43,17 +62,24 @@
     .menu-btn{
       display: none;
     }
+    .book-btn{
+      display: none;
+    }
+    .lang-btn{
+      // display: none;
+    }
+
     @media(max-width: 1024px){
       .menu-btn{
+        display: inline-block;
+      }
+      .book-btn{
         display: inline-block;
       }
       .phone-number-text{
         display: none;
       }
       font-size: 1rem;
-    }
-    @media(max-width: 700px){
-      
     }
   }
 }

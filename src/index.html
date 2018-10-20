@@ -31,51 +31,47 @@
   </head>
   <body>
     <div class="hbs-header">   
-      <div class="res-bar">
-
-        
-          <div class="res-container pure-g">
-            <div class="date-finder pure-u-1">
-              <div class="pure-g">
-                <span class='pure-u-1 pure-u-lg-1-4 '>
-                  <div class='el-date-pick'>
-                    <label for="checkin-date">Check In</label>
-                    <i class="far fa-calendar-alt"></i>
-                    <input id="checkin-date" class="datepicker" type="date">
-                  </div>
-                </span>
-                <span class='pure-u-1 pure-u-lg-1-4'>
-                  <div class='el-date-pick'>
-                    <label for="checkout-date">Check Out</label>
-                    <i class="far fa-calendar-alt"></i>
-                    <input id="checkout-date" class="datepicker" type="date">
-                  </div>
-                </span>
-                <span class='pure-u-1 pure-u-lg-1-4'>
-                  <div class='el-room-pick'>
-                    <label for="checkout-date">Room Type</label>
-                    <i class="fa fa-hotel"></i>
-                    <select name="room-select" id="room-select">
-                      <option value="deluxe">Deluxe</option>
-                      <option value="family">Deluxe Family</option>
-                      <option value="suite">One Bedroom Suite</option>
-                    </select>
-                  </div>
-                </span>
-                <span class="pure-u-0 pure-u-lg-1-8"></span>
-                <button class='pure-u-1 pure-u-lg-1-8 btn-pill-md'>Search</button>
+      
+      <script id='hbs_header' type="x-handlebars-template">
+        <div class="res-bar">
+            <div class="res-container pure-g">
+              <div class="date-finder pure-u-1">
+                <div class="pure-g">
+                  <span class='pure-u-1 pure-u-lg-1-4 '>
+                    <div class='el-date-pick'>
+                      <label for="checkin-date">Check In</label>
+                      <i class="far fa-calendar-alt"></i>
+                      <input id="checkin-date" class="datepicker" type="date">
+                    </div>
+                  </span>
+                  <span class='pure-u-1 pure-u-lg-1-4'>
+                    <div class='el-date-pick'>
+                      <label for="checkout-date">Check Out</label>
+                      <i class="far fa-calendar-alt"></i>
+                      <input id="checkout-date" class="datepicker" type="date">
+                    </div>
+                  </span>
+                  <span class='pure-u-1 pure-u-lg-1-4'>
+                    <div class='el-room-pick'>
+                      <label for="checkout-date">Room Type</label>
+                      <i class="fa fa-hotel"></i>
+                      <select name="room-select" id="room-select">
+                        <option value="deluxe">Deluxe</option>
+                        <option value="family">Deluxe Family</option>
+                        <option value="suite"> Suite</option>
+                      </select>
+                    </div>
+                  </span>
+                  <!-- <span class="pure-u-0 pure-u-lg-1-8"></span> -->
+                  <button class='pure-u-1 pure-u-lg-1-4 btn-pill-md'>Search</button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      <script id='hbs_header' type="x-handlebars-template">
-        <!-- {{!Container for Header/Nav/Carousel}} -->
 
-        <header class='header-container pure-g'>
-          
-
-            <div class="logo-bar">
-
+          <!-- {{!Container for Header/Nav/Carousel}} -->
+          <header class='header-container pure-g'>
+            <div class="logo-bar pure-g">
               <div class="logo pure-u-1-2">
                 <img 
                     src="img/{{header.logoImg}}" 
@@ -88,9 +84,17 @@
               </div>
               <div class="header-right pure-u-1-2">
                 <span class='phone-number-text'><i class="fas fa-phone fa-flip-horizontal"></i>&nbsp;{{general.phone-number}}</span>
-                <button class='menu-btn btn-pill-md'><i class="fas fa-bars"></i>{{headerMenu.menuText}}</button>
-                <button class='lang-btn btn-pill-md'><i class="fas fa-globe-americas"></i>{{headerMenu.chooseLangText}}</button>
-                <button class='book-btn btn-pill-md'>{{headerMenu.bookRoomText}}</button>
+                <span class='text-buttons'>
+                  <button class='menu-btn btn-pill-md'><i class="fas fa-bars"></i>{{headerMenu.menuText}}</button>
+                  <button class='lang-btn btn-pill-md'><i class="fas fa-globe-americas"></i>{{headerMenu.chooseLangText}}</button>
+                  <button class='book-btn btn-pill-md'><i class="fa fa-hotel"></i>{{headerMenu.bookRoomText}}</button>
+                </span>
+                
+                <span class='icon-buttons'>
+                  <button class='menu-btn btn-pill-md'><i class="fas fa-bars"></i></button>
+                  <button class='lang-btn btn-pill-md'><i class="fas fa-globe-americas"></i></button>
+                  <button class='book-btn btn-pill-md'><i class="fa fa-hotel"></i></button>
+                </span>
               </div>
             
           
@@ -118,17 +122,17 @@
       </script>
     </div>
 
-        <!-- Blank content block to use
+      <!-- Blank content block to use
         <div class="content-container">
-            <div class="content-group pure-g">
-                <div class="c-headline pure-u-1-4">
-                  <p class="c-headline-1">{{headline1}}</p>
-                  <p class="c-headline-2">{{headline2}}</p>
-                </div>
-                <div class="c-content-text pure-u-3-4">
-                  {{!content here}}
-                </div>
-              </div>
+          <div class="content-group pure-g">
+            <div class="c-headline pure-u-1-4">
+              <p class="c-headline-1">{{headline1}}</p>
+              <p class="c-headline-2">{{headline2}}</p>
+            </div>
+            <div class="c-content-text pure-u-3-4">
+              {{!content here}}
+            </div>
+          </div>
         </div> -->
     
  
