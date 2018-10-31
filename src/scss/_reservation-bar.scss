@@ -2,21 +2,18 @@
 .show{
   opacity: 1 !important;
   visibility: visible !important;
-  top: 75px !important;
 }
 
 .res-bar{
   position: absolute;
   display: grid;
   top: 75%;
-  padding: 1rem;
   width: 100vw;
   transition: all 500ms;
   @media(max-width: 1024px){
     visibility: hidden;
     opacity: 0;
-    justify-content: right;
-    top: 0;
+    top: 50%;
   }
   
   .res-container{
@@ -26,11 +23,12 @@
     padding: 0;
     line-height: 1;
     margin: 0 auto;
-    border-radius: 5px;
+    border-radius: border-radius;
     box-shadow: 0px 9px 55px -17px rgba(0,0,0,0.65);
     
     @media(max-width: 1024px){
-      width: 30vw;
+      min-width: 300px;
+      max-width: 500px;
     }
     
 
@@ -43,26 +41,24 @@
     
     .date-finder{
       text-align: right;
-      font-size: 1.25rem;
+      font-size: 1rem;
       padding: 10px;
-      
-      @media (max-width: 1260px){
-        font-size: 1rem;
-      }
 
       .el-date-pick, .el-room-pick{
+        display: block;
         padding: 5px 0;
         margin: 0 10px;
         border-bottom: 3px solid $white;
         white-space: nowrap;
-
-
+        overflow: hidden;
+        
+        
         label{
           font-size: 0.8em;
           display: block;
           text-align: left;
           padding-bottom: 5px;
-
+          
         }
         select{
           background: $dk-blue;
@@ -70,8 +66,10 @@
           border: none;
           outline: none;
           margin-top: 3px;
+          
+
         }
- 
+        
         input{
           border: none;
           background: transparent;
@@ -79,6 +77,11 @@
           @media (max-width: 960px){
             font-size: 1rem
           }
+        }
+
+        select, input{
+          width: 100%;
+         
         }
       }
 

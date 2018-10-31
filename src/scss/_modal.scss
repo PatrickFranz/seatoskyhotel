@@ -1,0 +1,82 @@
+.modal{
+  background: $dk-blue-modal;
+  border-radius: $border-radius;
+  color: $white;
+  display: none;
+  min-height: 90vh;
+  opacity: 0;
+  left: 5vw;
+  padding: 1rem;
+  position: absolute;
+  top: 5vh;
+  transition: all 500ms;
+  width: 90vw;
+  z-index: 10;
+
+  &--list-item{
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 10px 0;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    transition: all 250ms;
+    opacity: 0.5;
+   
+
+    .lang-flag{
+      img{
+        max-width: 1.25rem;
+      }
+    }
+
+    
+    &-link{
+
+      &:link, &:visited{
+        color: $white;
+        text-decoration: none;
+      }
+    }
+  }
+  
+  &--title-bar{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 2rem;
+    
+    .modal--title{
+      text-transform: capitalize;
+    }
+    
+    .modal--close{
+      justify-self: end;
+      i:hover{
+        transition: all 500ms;
+        color: lighten($white, 10%);
+        transform: translateY(2px);
+      }
+    }
+  }
+  
+  &--content{
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    ul{
+      padding: 0;
+    }
+    
+  }
+  &--footer{
+    
+  }
+}
+.selected{
+  opacity: 1 !important;
+}
+
+.hide-modal{
+  opacity: 0 !important;
+
+}

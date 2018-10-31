@@ -1,6 +1,6 @@
 .btn-pill{
   background: none;
-  border-radius: 12px;
+  border-radius: $border-radius;
   border: 3px solid;
   color: lighten($white, 10%);
   border-color: lighten($white, 10%);
@@ -20,6 +20,13 @@ i{
 .btn-pill-md{
   @extend .btn-pill;
   padding: 5px 12px;
+
+  @media screen and (max-width: 1024px){
+    padding-left: 20px;
+  }
+  @media screen and (max-width: 660px){
+    padding: 5px 0 5px 8px;
+  }
 }
 .btn-pill-lg{
   @extend .btn-pill;

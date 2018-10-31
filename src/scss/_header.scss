@@ -2,11 +2,13 @@
 
 @font-face {
   font-family: 'bodoni';
-  src: url('bodoniflf-roman-webfont.woff2') format('woff2'),
-       url('bodoniflf-roman-webfont.woff') format('woff');
+  src: url('../img/BodoniFLF-Roman.ttf') format('woff2'),
+       url('../img/bodoniflf-roman-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
-
+}
+.hbs-header{
+  position: relative;
 }
 
 .header-container{
@@ -21,36 +23,76 @@
 
   .logo{
     position: relative;
+    object-fit: contain;
 
+    img{
+
+    }
+    
+    @media(max-width: 660px){
+    }
     .logo-text{
+      white-space: nowrap;
       font-family: 'bodoni', serif;
       font-size: 2rem;
       position: absolute;
       top: 1rem;
       padding: 0 10px;
+
+      @media(max-width: 660px){
+        font-size: 1.25rem;
+      }
+
+      @media (max-width: 35.5em){
+        display: none;
+        }
     }
   }
 
   .header-right{
     padding: 10px;
-    text-align: right;
-    font-size: 1.25rem;
+    text-align: right; 
+    font-size: 1rem;
+    
+    .book-btn{
+      display: none;
+    }
 
+    .menu-btn{
+      display: none;
+    }
+    
+
+    @media(min-width: 960px){
+      .text-buttons{
+        display: initial;
+      }
+      .icon-buttons{
+        display: none;
+      }
+    }
+    
     @media(max-width: 960px){
       .text-buttons{
         display: none;
       }
       .icon-buttons{
-        display: inline-block;
+        display: initial; 
+        font-size: 1rem;
       }
-    }
 
-    @media(min-width: 600px){
-      .text-buttons{
-        display: inline-block;
-      }
-      .icon-buttons{
+    }
+    
+    @media (max-width: 1024px) {
+      .phone-number-text{
         display: none;
+      }
+
+      .book-btn{
+        display: initial;
+      }
+      .menu-btn{
+        display: initial;
       }
     }
     
@@ -59,28 +101,23 @@
       margin-right: 10px;
       font-weight: bold;
     }
-    .menu-btn{
-      display: none;
-    }
-    .book-btn{
-      display: none;
-    }
-    .lang-btn{
-      // display: none;
-    }
+    
+    // .lang-btn{
+    //   // display: none;
+    // }
 
-    @media(max-width: 1024px){
-      .menu-btn{
-        display: inline-block;
-      }
-      .book-btn{
-        display: inline-block;
-      }
-      .phone-number-text{
-        display: none;
-      }
-      font-size: 1rem;
-    }
+    // @media(max-width: 1024px){
+    //   .menu-btn{
+    //     display: inline-block;
+    //   }
+    //   .book-btn{
+    //     display: inline-block;
+    //   }
+    //   .phone-number-text{
+    //     display: none;
+    //   }
+    //   font-size: 1rem;
+    // }
   }
 }
 

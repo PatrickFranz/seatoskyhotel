@@ -10,8 +10,9 @@
     "country": "Canada",
     "toll-free-phone-number": "1-800-531-1530",
     "phone-number": "1-604-898-4874",
-    "email": "info@seatoshyhotel.com"
-
+    "email": "info@seatoshyhotel.com",
+    "gmap-url": "https://goo.gl/maps/EGsGS2gxYdT2",
+    "map-image": "img/locationMap.jpg"
   },
 
   "header" : {
@@ -19,14 +20,16 @@
       "logoTextLine1": "Sea To Sky Hotel &",
       "logoTextLine2": "Conference Center"
   },
+
   "headerMenu": {
     "menuText": "menu",
     "chooseLangText": "language",
     "bookRoomText": "reservations"
   },
   "nav": {
+    "title": "menu",
     "menuItems" : [
-      {"item": "rooms", "linkTo": "#"},
+      {"item": "rooms", "linkTo": "#rooms"},
       {"item": "facilities", "linkTo": "#"},
       {"item": "gallery", "linkTo": "#"},
       {"item": "attractions", "linkTo": "#"},
@@ -34,6 +37,17 @@
       {"item": "contact us", "linkTo": "#"}
     ]
   },
+
+  "language":{
+    "title": "languages",
+    "languages":[
+      {"lang": "english", "flagIconSrc": "img/usa-rnd-1.svg"},
+      {"lang": "french", "flagIconSrc": "img/france-rnd-1.svg"},
+      {"lang": "spanish", "flagIconSrc": "img/mexico-rnd-1.svg"},
+      {"lang": "german", "flagIconSrc": "img/german-rnd-1.svg"}
+    ]
+  },
+
   "footer":{
     "partnerLogos": [
       {

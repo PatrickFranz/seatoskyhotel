@@ -41,14 +41,14 @@
                     <div class='el-date-pick'>
                       <label for="checkin-date">Check In</label>
                       <i class="far fa-calendar-alt"></i>
-                      <input id="checkin-date" class="datepicker" type="date">
+                      <input id="checkin-date" class="datepicker" type="date"/>
                     </div>
                   </span>
                   <span class='pure-u-1 pure-u-lg-1-4'>
                     <div class='el-date-pick'>
                       <label for="checkout-date">Check Out</label>
                       <i class="far fa-calendar-alt"></i>
-                      <input id="checkout-date" class="datepicker" type="date">
+                      <input id="checkout-date" class="datepicker" type="date"/>
                     </div>
                   </span>
                   <span class='pure-u-1 pure-u-lg-1-4'>
@@ -62,37 +62,37 @@
                       </select>
                     </div>
                   </span>
-                  <!-- <span class="pure-u-0 pure-u-lg-1-8"></span> -->
                   <button class='pure-u-1 pure-u-lg-1-4 btn-pill-md'>Search</button>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- {{!Container for Header/Nav/Carousel}} -->
           <header class='header-container pure-g'>
             <div class="logo-bar pure-g">
-              <div class="logo pure-u-1-2">
+              <div class="logo pure-u-1-4 pure-u-lg-1-2">
                 <img 
                     src="img/{{header.logoImg}}" 
-                    alt="{{general.title}} logo">
+                    alt="{{general.title}} logo" />
                 <span class='logo-text'>
                   {{header.logoTextLine1}}
-                  <br>
+                  <br />
                   {{header.logoTextLine2}}
                 </span>
               </div>
-              <div class="header-right pure-u-1-2">
+              <div class="header-right pure-u-3-4 pure-u-lg-1-2">
                 <span class='phone-number-text'><i class="fas fa-phone fa-flip-horizontal"></i>&nbsp;{{general.phone-number}}</span>
                 <span class='text-buttons'>
                   <button class='menu-btn btn-pill-md'><i class="fas fa-bars"></i>{{headerMenu.menuText}}</button>
-                  <button class='lang-btn btn-pill-md'><i class="fas fa-globe-americas"></i>{{headerMenu.chooseLangText}}</button>
+                  <span id="google_translate_element_text"></span>
+                  <!-- <button class='lang-btn btn-pill-md'><i class="fas fa-globe-americas"></i>{{headerMenu.chooseLangText}}</button> -->
                   <button class='book-btn btn-pill-md'><i class="fa fa-hotel"></i>{{headerMenu.bookRoomText}}</button>
                 </span>
-                
+    
                 <span class='icon-buttons'>
                   <button class='menu-btn btn-pill-md'><i class="fas fa-bars"></i></button>
-                  <button class='lang-btn btn-pill-md'><i class="fas fa-globe-americas"></i></button>
+                  <span id="google_translate_element_icon"></span>
+                  <!-- <button class='lang-btn btn-pill-md'><i class="fas fa-globe-americas"></i></button> -->
                   <button class='book-btn btn-pill-md'><i class="fa fa-hotel"></i></button>
                 </span>
               </div>
@@ -113,7 +113,7 @@
           </div>
           <div class="carousel pure-u-1">
             <div class="image-container">
-              <img src="img/cloudyHoweSound-1-2.jpg" alt="Beautiful Howe Sound">
+              <img src="img/cloudyHoweSound-1-2.jpg" alt="Beautiful Howe Sound" />
             </div>
           </div>
         </div>
@@ -179,8 +179,8 @@
                 </div>
                 <div class="c-content-text pure-u-1 pure-u-lg-3-4">
                   <span class="locationMap">
-                    <a href="https://goo.gl/maps/EGsGS2gxYdT2" target="_blank">
-                      <img src="img//locationMap.jpg" alt="">
+                    <a href="{{general.gmap-url}}" target="_blank">
+                      <img src="{{general.map-image}}" alt="">
                     </a>
                   </span>
                 </div>
@@ -222,8 +222,8 @@
                     <p class="fas fa-at"></p>
                   </div>
                   <div class="pure-u-5-6">
-                    <p class='phone-number-text'>{{general.toll-free-phone-number}}</p>
-                    <p class='phone-number-text'>{{general.phone-number}}</p>
+                    <p class='phone-number-text'><a href="tel:{{general.toll-free-phone-number}}">{{general.toll-free-phone-number}}</a></p>
+                    <p class='phone-number-text'><a href="tel:{{general.phone-number}}">{{general.phone-number}}</a></p>
                     <p>{{general.address-1}}</p>
                     <p>{{general.city}}, {{general.prov-full}}</p>
                     <p>{{general.country}}</p>
@@ -264,10 +264,53 @@
         </footer>
       </script>
     </div>
-            
+      <div class="hbs-modal">
+        <script id="hbs_modal" type="x-handlebars-template">
+          <div class="modal">
+            <div class="modal--title-bar">
+              <span class="modal--title">{{title}}</span>
+              <span class="modal--close"><i class="far fa-times-circle"></i></span>
+            </div>
+            <div class="modal--content">
+              <ul class='list-container'>
+
+                {{#if menuItems}}
+                  {{#each menuItems}}
+                    <li class="modal--list-item"><a href="{{linkTo}}" class="modal--list-item-link">{{item}}</a></li>
+                  {{/each}}
+                {{/if}}
+
+                {{#if languages}}
+                  {{#each languages}}
+                  <li class="modal--list-item" data-lang="{{lang}}"">
+                    <a href="#" class="modal--list-item-link">
+                      <span class='lang-flag'><img src='{{flagIconSrc}}'/></span>
+                      <span class='lang-text'>{{lang}}<span>
+                    </a>
+                  </li>
+                  {{/each}}
+                {{/if}}
+               
+              </ul>
+            </div>
+            <div class="modal--footer">
+            </div>
+          </div>
+        </script> 
+      </div>  
     </div>
-    <!-- <script src="pikaday.js"></script> -->
     <script src='js/handlebars_template.js'></script>
     <script src='js/main.js'></script>
+
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element_text');
+        new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element_icon');
+      }
+      </script>
+      
+      <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
   </body>
   </html>

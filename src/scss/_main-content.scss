@@ -8,9 +8,9 @@
     line-height: 1.75;
     background: $white;
     
-    // @media(max-width:960px){
-    //   padding: 2rem 1rem;
-    // }
+    @media(max-width:1024px){
+      width: 100vw;
+    }
     
     &:nth-child(2){
       background-color: $grayContent;
