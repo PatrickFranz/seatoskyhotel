@@ -10,6 +10,8 @@ const body_src = document.querySelector("#hbs_body").innerHTML;
 const footer_src = document.querySelector("#hbs_footer").innerHTML;
 const modal_src = document.querySelector("#hbs_modal").innerHTML;
 
+
+
 const header_template = Handlebars.compile(header_src);
 const body_template = Handlebars.compile(body_src);
 const footer_template = Handlebars.compile(footer_src);

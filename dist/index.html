@@ -29,9 +29,8 @@
     <script type='text/javascript' src='js/handlebars.min.js'></script>
     <title>Sea To Sky Hotel</title>
   </head>
-  <body>
+  <body class='body'>
     <div class="hbs-header">   
-      
       <script id='hbs_header' type="x-handlebars-template">
         <div class="res-bar">
             <div class="res-container pure-g">
@@ -39,30 +38,30 @@
                 <div class="pure-g">
                   <span class='pure-u-1 pure-u-lg-1-4 '>
                     <div class='el-date-pick'>
-                      <label for="checkin-date">Check In</label>
+                      <label for="checkin-date">{{res-bar.check-in-label}}</label>
                       <i class="far fa-calendar-alt"></i>
                       <input id="checkin-date" class="datepicker" type="date"/>
                     </div>
                   </span>
                   <span class='pure-u-1 pure-u-lg-1-4'>
                     <div class='el-date-pick'>
-                      <label for="checkout-date">Check Out</label>
+                      <label for="checkout-date">{{res-bar.check-out-label}}</label>
                       <i class="far fa-calendar-alt"></i>
                       <input id="checkout-date" class="datepicker" type="date"/>
                     </div>
                   </span>
                   <span class='pure-u-1 pure-u-lg-1-4'>
                     <div class='el-room-pick'>
-                      <label for="checkout-date">Room Type</label>
+                      <label for="checkout-date">{{res-bar.room-type-label}}</label>
                       <i class="fa fa-hotel"></i>
                       <select name="room-select" id="room-select">
-                        <option value="deluxe">Deluxe</option>
-                        <option value="family">Deluxe Family</option>
-                        <option value="suite"> Suite</option>
-                      </select>
+                        {{#each res-bar.room-type-options}}
+                          <option value="{{this}}">{{this}}</option>
+                        {{/each}}
+                        </select>
                     </div>
                   </span>
-                  <button class='pure-u-1 pure-u-lg-1-4 btn-pill-md'>Search</button>
+                  <button class='pure-u-1 pure-u-lg-1-4 btn-pill-md'>{{res-bar.submit-btn-text}}</button>
                 </div>
               </div>
             </div>
@@ -72,8 +71,8 @@
             <div class="logo-bar pure-g">
               <div class="logo pure-u-1-4 pure-u-lg-1-2">
                 <img 
-                    src="img/{{header.logoImg}}" 
-                    alt="{{general.title}} logo" />
+                  src="img/{{header.logoImg}}" 
+                  alt="{{general.title}} logo" />
                 <span class='logo-text'>
                   {{header.logoTextLine1}}
                   <br />
@@ -83,31 +82,21 @@
               <div class="header-right pure-u-3-4 pure-u-lg-1-2">
                 <span class='phone-number-text'><i class="fas fa-phone fa-flip-horizontal"></i>&nbsp;{{general.phone-number}}</span>
                 <span class='text-buttons'>
-                  <button class='menu-btn btn-pill-md'><i class="fas fa-bars"></i>{{headerMenu.menuText}}</button>
+                  <button class='menu-btn btn-pill-md'><i class="fas fa-bars"></i><span>{{headerMenu.menuText}}</span></button>
                   <span id="google_translate_element_text"></span>
-                  <!-- <button class='lang-btn btn-pill-md'><i class="fas fa-globe-americas"></i>{{headerMenu.chooseLangText}}</button> -->
-                  <button class='book-btn btn-pill-md'><i class="fa fa-hotel"></i>{{headerMenu.bookRoomText}}</button>
-                </span>
-    
-                <span class='icon-buttons'>
-                  <button class='menu-btn btn-pill-md'><i class="fas fa-bars"></i></button>
-                  <span id="google_translate_element_icon"></span>
-                  <!-- <button class='lang-btn btn-pill-md'><i class="fas fa-globe-americas"></i></button> -->
-                  <button class='book-btn btn-pill-md'><i class="fa fa-hotel"></i></button>
+                  <button class='book-btn btn-pill-md'><i class="fa fa-hotel"></i><span>{{headerMenu.bookRoomText}}</span></button>
                 </span>
               </div>
-            
           
           <div class="pure-u-1">
             <div class="pure-menu pure-menu-horizontal">
-                <a href="#" class="pure-menu-heading pure-menu-link">Explore <i class="fas fa-angle-right"></i></a>
+                <a href="" data-linkto="/" class="pure-menu-heading pure-menu-link">Sea To Sky Hotel <i class="fas fa-angle-right"></i></a>
                 <ul class="pure-menu-list">
-                  <li class="pure-menu-item"><a href="#" class="pure-menu-link">Rooms</a></li>
-                  <li class="pure-menu-item"><a href="#" class="pure-menu-link">Facilities</a></li>
-                  <li class="pure-menu-item"><a href="#" class="pure-menu-link">Gallery</a></li>
-                  <li class="pure-menu-item"><a href="#" class="pure-menu-link">Attractions</a></li>
-                  <li class="pure-menu-item"><a href="#" class="pure-menu-link">Beer & Wine Store</a></li>
-                  <li class="pure-menu-item"><a href="#" class="pure-menu-link">Contact Us</a></li>
+                  {{#each nav.menuItems}}
+                    <li class="menu-item pure-menu-item" >
+                      <a class="pure-menu-link" data-linkto="{{linkTo}}" href="{{linkTo}}" >{{item}}</a>
+                    </li>
+                  {{/each}}
                 </ul>
             </div>
           </div>
@@ -122,7 +111,7 @@
       </script>
     </div>
 
-      <!-- Blank content block to use
+      <!-- Blank content block to use for new pages
         <div class="content-container">
           <div class="content-group pure-g">
             <div class="c-headline pure-u-1-4">
@@ -135,73 +124,8 @@
           </div>
         </div> -->
     
- 
-    
     <div class="hbs-main-content">
-      <script id='hbs_body' type="x-handlebars-template">
-        <div class="content-container">
-
-            <div class="content-group pure-g extra-padding-bottom">
-              <div class="c-headline pure-u-1 pure-u-lg-1-4">
-                <p class="c-headline-1">Sea to Sky</p>
-                <p class="c-headline-2">Hotel</p>
-              </div>
-              <div class="c-content-text pure-u-1 pure-u-lg-3-4">
-                <p>
-                  The Sea to Sky Hotel is nestled in the Garibaldi Provincial Park on the Sea to Sky Hwy, a few minutes north of Squamish,  70 km away from Vancouver B.C. and 30 minutes drive to Whistler, the North America’s foremost all year-round mountain resort. Outside our doors are unlimited attractions, outdoor activities, and shopping.
-                </p>
-              </div>
-            </div>
-
-            <div class="content-group pure-g extra-padding-bottom">
-                <div class="c-headline pure-u-1 pure-u-lg-1-4">
-                  <p class="c-headline-1">Rooms</p>
-                  <p class="c-headline-2"></p>
-                </div>
-                <div class="c-content-text pure-u-1 pure-u-lg-3-4">
-                  <p>
-                      All of our 50 oversized guest rooms and suites are tastefully decorated with stunning mountain views and are suitable for groups and events, business or pleasurable romantic getaway.
-                  </p>
-                </div>
-                <div class="images-container pure-g">
-                  <div class="pure-u-1">
-                    <img src="img/deluxeRoom-2.jpg" alt="" class="c-image">
-                    <img src="img/deluxeFamilyRoom-2.jpg" alt="" class="c-image">
-                    <img src="img/deluxeSuite-2.jpg" alt="" class="c-image">
-                  </div>
-                </div>   
-            </div>
-            
-            <div class="content-group blue-back pure-g">
-                <div class="c-headline pure-u-1 pure-u-lg-1-4">
-                  <p class="c-headline-1">Location</p>
-                  <p class="c-headline-2"></p>
-                </div>
-                <div class="c-content-text pure-u-1 pure-u-lg-3-4">
-                  <span class="locationMap">
-                    <a href="{{general.gmap-url}}" target="_blank">
-                      <img src="{{general.map-image}}" alt="">
-                    </a>
-                  </span>
-                </div>
-              </div>
-            
-            <div class="content-group pure-g extra-padding-bottom">
-                <div class="c-headline pure-u-1 pure-u-lg-1-4">
-                  <p class="c-headline-1">
-                    Amenities
-                  </p>
-                  <p class="c-headline-2">
-                  </p>
-                </div>
-                <div class="c-content-text pure-u-1 pure-u-lg-3-4">
-                  <p>
-                      The Sea to Sky Hotel offers an array of amenities that ensure convenience as well as luxury. Along with well-appointed guest rooms and suites, the Sea to Sky Hotel offers guests:
-                  </p>
-                </div>
-              </div>
-          </div>  
-      </script>
+      <script id='hbs_body' type="x-handlebars-template"></script>
     </div>
 
     <div class="hbs-footer">
@@ -239,7 +163,7 @@
                     <div class="partner-logos pure-g">
                       <!-- Array of logos with links -->
                       {{#each footer.partnerLogos}}
-                        <div class="pure-u-1-3 pure-u-lg-1-2"
+                        <div class="pure-u-1-2 pure-u-lg-1-3"
                           <a href="{{this.linkTo}}" target="_blank"> 
                             <img src="{{this.logo}}" alt="{{this.name}} logo">
                           </a>
@@ -276,21 +200,10 @@
 
                 {{#if menuItems}}
                   {{#each menuItems}}
-                    <li class="modal--list-item"><a href="{{linkTo}}" class="modal--list-item-link">{{item}}</a></li>
+                    <li class="menu-item modal--list-item"><a data-linkto="{{item}}" href="{{linkTo}}" class="modal--list-item-link">{{item}}</a></li>
                   {{/each}}
                 {{/if}}
 
-                {{#if languages}}
-                  {{#each languages}}
-                  <li class="modal--list-item" data-lang="{{lang}}"">
-                    <a href="#" class="modal--list-item-link">
-                      <span class='lang-flag'><img src='{{flagIconSrc}}'/></span>
-                      <span class='lang-text'>{{lang}}<span>
-                    </a>
-                  </li>
-                  {{/each}}
-                {{/if}}
-               
               </ul>
             </div>
             <div class="modal--footer">
@@ -299,18 +212,14 @@
         </script> 
       </div>  
     </div>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script src='js/handlebars_template.js'></script>
     <script src='js/main.js'></script>
 
     <script type="text/javascript">
       function googleTranslateElementInit() {
         new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element_text');
-        new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element_icon');
       }
-      </script>
-      
-      <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-
-  </body>
+    </script>
+    </body>
   </html>

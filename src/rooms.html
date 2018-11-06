@@ -1,0 +1,36 @@
+<div class="hbs-rooms-content">
+  <div class="content-container">
+    <div class="content-group pure-g extra-padding-bottom">
+      <div class="c-headline pure-u-1 pure-u-lg-1-4">
+        {{#with pages.rooms}}
+        <p class="c-headline-1">{{page-name}}</p>
+        <p class="c-headline-2"></p>
+        <div class="description">
+          <p class='desc'>{{page-desc-1}}</p>
+          <p class='desc'>{{page-desc-2}}</p>
+         
+          <ul>
+            {{#each rooms-include-array}}
+              <li>{{this}}</li>
+            {{/each}}
+          </ul>
+        </div> 
+      </div>
+      <div class="pure-u-1 pure-u-lg-3-4">
+        {{#each room-types}}
+        <div class="sub-section">
+          <div class="image">
+            <img src="{{images.[0]}}" alt="">
+          </div>
+          <p class="s-headline-1">{{name}}</p>
+          <div class="description">
+            <p class='desc'>{{desc}}</p>
+          </div>        
+        </div>
+        {{/each}}
+      </div>
+    </div>
+    {{/with}} 
+  </div>
+
+</div>

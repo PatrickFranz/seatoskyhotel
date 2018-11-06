@@ -29,26 +29,40 @@
   "nav": {
     "title": "menu",
     "menuItems" : [
-      {"item": "rooms", "linkTo": "#rooms"},
-      {"item": "facilities", "linkTo": "#"},
-      {"item": "gallery", "linkTo": "#"},
-      {"item": "attractions", "linkTo": "#"},
-      {"item": "beer & wine store", "linkTo": "#"},
-      {"item": "contact us", "linkTo": "#"}
+      {"item": "home", "linkTo": "/home"},
+      {"item": "rooms", "linkTo": "/rooms"},
+      {"item": "facilities", "linkTo": "/facilities"},
+      {"item": "gallery", "linkTo": "/gallery"},
+      {"item": "attractions", "linkTo": "/attractions"},
+      {"item": "beer & wine store", "linkTo": "/beerwine"},
+      {"item": "contact us", "linkTo": "/contact"}
     ]
   },
-
-  "language":{
-    "title": "languages",
-    "languages":[
-      {"lang": "english", "flagIconSrc": "img/usa-rnd-1.svg"},
-      {"lang": "french", "flagIconSrc": "img/france-rnd-1.svg"},
-      {"lang": "spanish", "flagIconSrc": "img/mexico-rnd-1.svg"},
-      {"lang": "german", "flagIconSrc": "img/german-rnd-1.svg"}
-    ]
+  "res-bar":{
+    "check-in-label": "check in",
+    "check-out-label": "check out",
+    "room-type-label": "room type",
+    "room-type-options": [
+      "deluxe", "family", "suite"
+    ],
+    "submit-btn-text": "Search"
   },
 
   "footer":{
+    "links": [
+      {
+        "text": "sitemap",
+        "url": "/sitemap.html"
+      },
+      {
+        "text": "privacy policy",
+        "url": "/privacy.html"
+      },
+      {
+        "text": "cookie notice",
+        "url": "/cookie_notice.html"
+      }
+    ],
     "partnerLogos": [
       {
         "name": "BCAA Travel",
@@ -76,5 +90,41 @@
         "linkTo": "http://www.aeroplan.com/"
       }
     ]
-  }
+  },
+
+  "pages": {
+    "home":{},
+
+
+    "rooms":{
+      "page-name": "rooms",
+      "page-desc-1": "All of our 50 oversized guest rooms and suites are tastefully decorated with stunning mountain      views and are suitable for groups and events, business or pleasurable romantic getaway.",
+      "page-desc-2": "Many room amenities ensure a comfortable, relaxing and convenient stay. Each Sea to Sky Hotel      room includes:",
+      "rooms-include-array": ["Microwave Oven", "Mini-Refrigerator", "AM/FM clock radio", "Air-conditioning", "Coffee/tea maker", "Hair dryer", "Iron and ironing board", "Free Wireless Internet", "Balcony with patio chairs"],
+      "room-types": [
+        {
+          "name": "deluxe room",
+          "desc": "300 SQ/FT. Deluxe room with Two Queen beds with private balcony, 37'' LCD screen television with premium cable channels, microwave, mini- refrigerator, desk/work space",
+          "images":["img/room-holder-1.jpg"]
+        },
+        {
+          "name": "deluxe family room",
+          "desc": "380 SQ/FT. Deluxe Family room with Two Queen/One King Bed, private balcony, 37” LCD screen television with premium cable channels, microwave, mini- refrigerator, desk/work space, AM/FM clock radio, air-conditioning, coffee maker, hair dryer, iron and ironing board, complimentary wireless internet and parking.",
+          "images":["img/room-holder-1.jpg"]
+        },
+        {
+          "name": "deluxe one bedroom suite",
+          "desc": "600 SQ/FT. Deluxe suite with large sitting area, 37” LCD television, one King bed, one separate bedroom with one Queen bed with 32” LCD television. Private balcony, microwave, mini- refrigerator, desk/work space, AM/FM clock radio, air-conditioning, coffee maker, hair dryer, iron and ironing board, complimentary wireless internet and parking.",
+          "images":["img/room-holder-1.jpg"]
+        }
+      ]
+    },
+
+
+    "page-3":{},
+    "page-4":{},
+    "page-5":{},
+    "page-6":{},
+    "page-7":{}
+  } 
 }

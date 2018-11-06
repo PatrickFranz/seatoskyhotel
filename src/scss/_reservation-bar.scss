@@ -55,6 +55,7 @@
         
         label{
           font-size: 0.8em;
+          text-transform: capitalize;
           display: block;
           text-align: left;
           padding-bottom: 5px;
@@ -66,8 +67,7 @@
           border: none;
           outline: none;
           margin-top: 3px;
-          
-
+          text-transform: capitalize;
         }
         
         input{
