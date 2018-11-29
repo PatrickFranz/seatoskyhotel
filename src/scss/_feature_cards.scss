@@ -1,0 +1,26 @@
+.feature-cards{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 1rem;
+  
+  .feature-card{
+    border: 1px solid $black;
+    padding: 2rem 3rem;
+    text-align: center;
+    user-select: none;
+    background: lighten($grayBack, 10%);
+
+    .feature{
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .value{
+      color:lighten($black, 10%);
+    }
+
+    .icon{
+      max-width: 5rem;
+    }
+  }
+}

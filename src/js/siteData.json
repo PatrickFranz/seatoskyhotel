@@ -26,6 +26,7 @@
     "chooseLangText": "language",
     "bookRoomText": "reservations"
   },
+
   "nav": {
     "title": "menu",
     "menuItems" : [
@@ -34,10 +35,11 @@
       {"item": "facilities", "linkTo": "/facilities"},
       {"item": "gallery", "linkTo": "/gallery"},
       {"item": "attractions", "linkTo": "/attractions"},
-      {"item": "beer & wine store", "linkTo": "/beerwine"},
+      {"item": "beer & wine store", "linkTo": "/bwstore"},
       {"item": "contact us", "linkTo": "/contact"}
     ]
   },
+
   "res-bar":{
     "check-in-label": "check in",
     "check-out-label": "check out",
@@ -52,17 +54,18 @@
     "links": [
       {
         "text": "sitemap",
-        "url": "/sitemap.html"
+        "url": "/sitemap"
       },
       {
         "text": "privacy policy",
-        "url": "/privacy.html"
+        "url": "/privacy"
       },
       {
         "text": "cookie notice",
-        "url": "/cookie_notice.html"
+        "url": "/cookie_notice"
       }
     ],
+
     "partnerLogos": [
       {
         "name": "BCAA Travel",
@@ -93,8 +96,11 @@
   },
 
   "pages": {
-    "home":{},
-
+    "home":{
+      "page-name": "home",
+      "page-desc-1": "All of our 50 oversized guest rooms and suites are tastefully decorated with stunning mountain      views and are suitable for groups and events, business or pleasurable romantic getaway.",
+      "page-desc-2": "Many room amenities ensure a comfortable, relaxing and convenient stay. Each Sea to Sky Hotel      room includes:"
+    },
 
     "rooms":{
       "page-name": "rooms",
@@ -105,26 +111,170 @@
         {
           "name": "deluxe room",
           "desc": "300 SQ/FT. Deluxe room with Two Queen beds with private balcony, 37'' LCD screen television with premium cable channels, microwave, mini- refrigerator, desk/work space",
-          "images":["img/room-holder-1.jpg"]
+          "images":["img/room-holder-1.jpg"],
+          "features": [
+            {
+              "feature": "Max Guests",
+              "value": "4",
+              "icon": "img/ico_sleeps.svg"
+            },
+            {
+              "feature": "Beds",
+              "value": "2 Queen Size",
+              "icon": "img/ico_beds.svg"
+            }
+          ]
         },
         {
           "name": "deluxe family room",
           "desc": "380 SQ/FT. Deluxe Family room with Two Queen/One King Bed, private balcony, 37” LCD screen television with premium cable channels, microwave, mini- refrigerator, desk/work space, AM/FM clock radio, air-conditioning, coffee maker, hair dryer, iron and ironing board, complimentary wireless internet and parking.",
-          "images":["img/room-holder-1.jpg"]
+          "images":["img/room-holder-1.jpg"],
+          "features": [
+            {
+              "feature": "Max Guests",
+              "value": "6",
+              "icon": "img/ico_sleeps.svg"
+            },
+            {
+              "feature": "Beds",
+              "value": "2 Queen, 1 King",
+              "icon": "img/ico_beds.svg"
+            }
+          ]
         },
         {
           "name": "deluxe one bedroom suite",
           "desc": "600 SQ/FT. Deluxe suite with large sitting area, 37” LCD television, one King bed, one separate bedroom with one Queen bed with 32” LCD television. Private balcony, microwave, mini- refrigerator, desk/work space, AM/FM clock radio, air-conditioning, coffee maker, hair dryer, iron and ironing board, complimentary wireless internet and parking.",
-          "images":["img/room-holder-1.jpg"]
+          "images":["img/room-holder-1.jpg"],
+          "features": [
+            {
+              "feature": "Max Guests",
+              "value": "5",
+              "icon": "img/ico_sleeps.svg"
+            },
+            {
+              "feature": "Beds",
+              "value": "1 Queen, 1 King",
+              "icon": "img/ico_beds.svg"
+            }
+          ]
         }
       ]
     },
 
-
-    "page-3":{},
-    "page-4":{},
-    "page-5":{},
-    "page-6":{},
-    "page-7":{}
+    "facilities":{
+      "page-name": "facilities",
+      "page-desc-1": "<p>As the major Banquet & Conference Center in Squamish and the leading hotel location for upscale meetings in the Sea to Sky corridor, the Sea to Sky Hotel has raised the bar on meeting planner expectations.</p><p>From first class service to unmatched surroundings, we insure your next meeting will be a successful one.</p><p>The Sea to Sky Hotel Banquet and Conference Centre is located in the Garibaldi Provincial Park on the Sea to Sky Hwy, a few minutes north of Squamish and a 30 minutes drive to Whistler.</p>",
+      "page-desc-2": "This Lodging Facility offers 7,200 square feet of the most inviting meeting space in the Squamish area:",
+      "fac-features": [
+        "Four meeting rooms including the Sea to Sky Ballroom accommodating over 200 guests.",
+        "Complimentary wireless access in all meeting rooms and lobby.",
+        "24-hours front desk service."
+      ],
+      "fac-meeting-subs": [
+        {
+          "title": "Meetings",
+          "image-src": "img/meeting_room_1.jpg",
+          "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae doloribus quibusdam dignissimos, ipsa harum repellat doloremque eligendi eveniet facilis voluptatibus autem asperiores recusandae, nihil possimus at! Numquam quia consequatur culpa."
+        }, 
+        {
+          "title": "Conferences",
+          "image-src": "img/conference-1.jpg",
+          "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, vero fuga quam consectetur perspiciatis labore incidunt unde beatae a ea laborum, fugiat itaque expedita dolore, adipisci magni? Consectetur, mollitia repellat!"
+        }, 
+        {
+          "title": "Weddings",
+          "image-src": "img/wedding-1.png",
+          "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore a, voluptatibus molestias voluptatum repellendus optio libero laboriosam quasi harum assumenda eligendi sit cupiditate nisi et dolorem, vitae obcaecati temporibus modi!"
+        }
+      ]
+    },
+    "gallery":{
+      "page-name": "gallery",
+      "page-desc-1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, aperiam quisquam corrupti aliquid expedita impedit optio. Nesciunt, neque quisquam amet libero totam, placeat fugiat obcaecati doloremque delectus debitis architecto eligendi.",
+      "page-desc-2":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus obcaecati deserunt iste deleniti facilis eaque voluptatum unde natus, magnam sint quidem ipsam, et cupiditate atque! Nostrum alias aspernatur eligendi atque.",
+      "images" : [
+        {
+          "id": 0,
+          "title":"banquet room",
+          "category":"banquet",
+          "desc":"Banquet room set up for a reception",
+          "image-src":"img/banquet_room_3.jpg"
+        },
+        {
+          "id": 1,
+          "title":"banquet room",
+          "category":"banquet",
+          "desc":"Banquet room with podium",
+          "image-src":"img/banquet_room_4.jpg"
+        },
+        {
+          "id": 2,
+          "title":"banquet room",
+          "category":"wedding",
+          "desc":"A memorable wedding reception in the heart of Sea to Sky country",
+          "image-src":"img/banquet_room_4.jpg"
+        },
+        {
+          "id": 3,
+          "title":"conference room",
+          "category":"conference",
+          "desc":"Conference room hosting a large dinner",
+          "image-src":"img/conference-1.jpg"
+        },
+        {
+          "id": 4,
+          "title":"meeting room",
+          "category":"meeting",
+          "desc":"The meeting room is large enough to accomodate big meetings",
+          "image-src":"img/meeting_room_1.jpg"
+        },
+        {
+          "id": 5,
+          "title":"meeting room",
+          "category":"meeting",
+          "desc":"The perfect location for smaller meetings, with a professional feel",
+          "image-src":"img/meeting_room_2.jpg"
+        },
+        {
+          "id": 6,
+          "title":"meeting room",
+          "category":"meeting",
+          "desc":"Hammer out those ideas with food service",
+          "image-src":"img/meeting_room_3.jpg"
+        }
+      ]
+    },
+    "attractions":{
+      "page-name": "attractions",
+      "page-desc-1": "Squamish attractions",
+      "page-desc-2":"",
+      "attraction-arr":[
+        {
+          "title": "",
+          "catergory": "",
+          "desc": "",
+          "image": "",
+          "link": ""
+        },
+        {
+          "title": "",
+          "catergory": "",
+          "desc": "",
+          "image": "",
+          "link": ""
+        }
+      ]
+    },
+    "bwstore":{
+      "page-name": "beer & wine store",
+      "page-desc-1": "Beer & Wime Store",
+      "page-desc-2":""
+    },
+    "contactus":{
+      "page-name": "contact us",
+      "page-desc-1": "How to reach us",
+      "page-desc-2":""
+    }
   } 
 }

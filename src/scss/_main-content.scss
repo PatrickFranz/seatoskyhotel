@@ -7,6 +7,7 @@
     padding: 2rem 3rem;
     line-height: 1.75;
     background: $white;
+    z-index: 2;
     
     @media(max-width:1024px){
       width: 100vw;
@@ -19,25 +20,25 @@
 
     .sub-section{
       padding: 2rem 4rem;
-      background-color: $grayBack;
+      background-color: $grayContent;
       margin-bottom: 1rem;
 
       @media(max-width:1024px){
         padding: 10px 5px;
         margin-top: 1rem;
       }
-      
-      .s-headline-1{
-        font-size: 1.5rem;
-        margin: 0;
-        text-transform: capitalize;
-      }
 
-      .image{
+      .image{ 
         img{
           max-width: 100%;
         }
       }
+    }
+
+    .s-headline-1{
+      font-size: 1.5rem;
+      margin: 0;
+      text-transform: capitalize;
     }
     
     .c-content-text{

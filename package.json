@@ -6,7 +6,7 @@
   "scripts": {
     "build-task:scss-compile": "node-sass-chokidar --source-map true src/scss/ -o dist/css",
     "build-task:autoprefixer": "postcss dist/css/*.css --use autoprefixer -d dist/css",
-    "build-task:mv-images": "copyfiles -f src/img/* dist/img",
+    "build-task:mv-images": "copyfiles -f src/img/* src/img/**/* dist/img",
     "build-task:mv-js": "copyfiles -f src/js/* dist/js",
     "build-task:mv-html": "copyfiles -f src/*.html dist/",
     "build-task:mv-root": "copyfiles -af ./* dist/",

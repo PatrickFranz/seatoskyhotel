@@ -1,9 +1,9 @@
 /* HEADER START */
 
 @font-face {
-  font-family: 'bodoni';
-  src: url('../img/BodoniFLF-Roman.ttf') format('woff2'),
-       url('../img/bodoniflf-roman-webfont.woff') format('woff');
+  font-family: 'Bodoni';
+  src: url('../img/Bodoni-PosterCompressed.woff2') format('woff2'),
+      url('../img/Bodoni-PosterCompressed.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -33,8 +33,8 @@
     }
     .logo-text{
       white-space: nowrap;
-      font-family: 'bodoni', serif;
-      font-size: 2rem;
+      font-family: 'Bodoni'; font-weight: normal; font-style: normal;
+      font-size: 2.25rem;
       position: absolute;
       top: 1rem;
       padding: 0 10px;

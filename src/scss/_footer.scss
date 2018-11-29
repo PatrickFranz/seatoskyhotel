@@ -1,9 +1,11 @@
 footer{
   width: 100vw;
   color: $white;
+  position: relative;
+  top: -20px;  
   
   .footer-content{
-    width: 90vw;
+    width: 100vw;
     background: $black;
     margin: 0 auto;
     padding: 2rem 3rem 5rem;
@@ -26,6 +28,13 @@ footer{
       color: $white;
     }
 
+
+
+    ul{
+      list-style: none;
+      text-transform: uppercase;
+    }
+
     .location-container{
 
       .icons p{
@@ -37,7 +46,11 @@ footer{
     .partner-logos{
       padding: 10px;
     }
-    
+
+    .footer-links{
+      text-transform: capitalize;
+    }
+
     @media(max-width:960px){
       padding: 2rem 1rem 7rem;
     }
