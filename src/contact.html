@@ -8,27 +8,45 @@
         <div class="description">
           <p class='desc'>{{{page-desc-1}}}</p>
           <p class='desc'>{{page-desc-2}}</p>
-         
-          <ul>
-            {{#each fac-features}}
-              <li>{{this}}</li>
-            {{/each}}
-          </ul>
         </div> 
       </div>
-      <div class="pure-u-1 pure-u-lg-2-3">
-        
-        {{#each fac-meeting-subs}}
+      <div class="pure-u-1 pure-u-lg-2-3">  
         <div class="sub-section">
-          <div class="image">
-            <img src="{{image-src}}" alt="">
-          </div>
-          <p class="s-headline-1">{{title}}</p>
-          <div class="description">
-            <p class='desc'>{{desc}}</p>
-          </div>
+            <p class="s-headline-1">{{{form-headline}}}</p>
+            <div class="description">
+              <p class='desc'>{{form-desc}}</p>
+            </div>
+          <form class="pure-form pure-form-stacked">
+            <fieldset>
+              <input class='pure-input-2-3' type="text" placeholder="Name">
+              <input class='pure-input-2-3' type="email" placeholder="Email" required>
+              <input class='pure-input-2-3' type="tel" placeholder="Phone">
+              <input class='pure-input-2-3' type="text" placeholder="Reference number">
+              <textarea class='pure-input-2-3' name="" id="" cols="30" rows="10" placeholder="Question or Feedback"></textarea>
+            </fieldset>
+          </form>
+        
         </div>
-        {{/each}}        
+        <div class="sub-section">
+            <p class="s-headline-1">{{{contact-headline}}}</p>
+            <div class="description">
+              <p class='desc'>{{contact-desc}}</p>
+            </div>
+            <div class="contact-info">
+              <p class='phone-number-text'>
+                <a href="tel:{{../general.toll-free-phone-number}}">{{../general.toll-free-phone-number}}</a>
+              </p>
+              <p class='phone-number-text'>
+                <a href="tel:{{../general.phone-number}}">{{../general.phone-number}}</a>
+              </p>
+              <p>{{../general.address-1}}</p>
+              <p>{{../general.city}}, {{../general.prov-full}}</p>
+              <p>{{../general.country}}</p>
+              <p>{{../general.postal}}</p>
+              <p>{{../general.email}}</p>
+            </div>
+        </div>
+        
       </div>
     </div>
     {{/with}} 

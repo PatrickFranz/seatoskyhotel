@@ -1,14 +1,14 @@
 .modal{
-  background: $dk-blue-modal;
+  background: rgba(15,15,15,0.9);
   border-radius: $border-radius;
   color: $white;
   display: none;
-  min-height: 90vh;
+  height: 90vh;
   opacity: 0;
   left: 5vw;
   padding: 1rem;
   position: fixed;
-  top: 5vh;
+  top: 1rem;
   transition: all 500ms;
   width: 90vw;
   z-index: 10;
@@ -42,11 +42,28 @@
   
   &--title-bar{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 3fr 1fr;
     font-size: 2rem;
+    padding-bottom: 2rem;
+
+    @media (max-width: 360px){
+      font-size: 1.5rem;
+    }
     
     .modal--title{
+      position: relative;
       text-transform: capitalize;
+      
+      &:after{
+        position: absolute;
+        content: "";
+        border: $border-style $white;
+        width: 10%;
+        left: 0;
+        top: 3.5rem;
+
+      }
+
     }
     
     .modal--close{
@@ -68,8 +85,11 @@
     }
     img{
       margin: 0 auto;
-      max-height: 75vh;
+      max-height: 60vh;
       max-width: 75vw;
+    }
+    .modal--desc{
+      font-size: 1.1rem;
     }
     
   }

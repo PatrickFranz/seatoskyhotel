@@ -4,6 +4,7 @@ function init(){
   const btnReservation = document.querySelector('.book-btn');
   const resBarElement = document.querySelector('.res-bar'); 
   const navNodes = document.querySelectorAll('.menu-item');
+  const re_url = /\b(https?|ftp|file):\/\/[\-A-Za-z0-9+&@#\/%?=~_|!:,.;]*[\-A-Za-z0-9+&@#\/%=~_|]/
   let pageData = null;
   const routes = {
     "/": "home.html",
@@ -38,15 +39,18 @@ function init(){
   function addNavListeners(nodes, closeModal) {
     nodes.forEach(el => {
       el.addEventListener('click', e => {
-        nodes.forEach(n => n.classList.remove('selected'));
+        const linkto = e.target.dataset.linkto || e.currentTarget.dataset.linkto
+        console.log(linkto)
         e.preventDefault();
-        console.log('click')
-        e.currentTarget.classList.add('selected');
-        history.pushState(null, null, e.target.dataset.linkto);
         if(closeModal) {
           closeModal()
         }
-        showContent(routes[e.target.dataset.linkto]);
+        if(routes[linkto]){
+          history.pushState(null, null,linkto);
+          showContent(routes[linkto]);
+        } else if(linkto.match(re_url)){
+          window.open(linkto);
+        }
       });
     });
   }
@@ -72,14 +76,23 @@ function init(){
             //Run any page specific JS
             switch(page){
               case("gallery.html"):
-                runGallery(); 
+                loadGallery(); 
                 break;
+              case("home.html"):
+                loadHome();
+                break;
+
             }
         }
       });      
   }
 
-  function runGallery(){
+  function loadHome(){
+    addNavListeners(document.querySelectorAll('.view-more'));
+    addNavListeners(document.querySelectorAll('.agg-review'));
+  }
+
+  function loadGallery(){
     const cards = document.querySelectorAll(".gallery-card");
     cards.forEach(card => card.addEventListener('click', (e) => {
       if(!pageData){

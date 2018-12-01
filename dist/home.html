@@ -15,23 +15,27 @@
       <div class="c-headline pure-u-1 pure-u-lg-1-4">
         <p class="c-headline-1">Rooms</p>
         <p class="c-headline-2"></p>
+        <p class="view-more"><a href="/rooms" data-linkto="/rooms">view rooms</a></p>
       </div>
       <div class="c-content-text pure-u-1 pure-u-lg-3-4">
         <p>
             All of our 50 oversized guest rooms and suites are tastefully decorated with stunning mountain views and are suitable for groups and events, business or pleasurable romantic getaway.
         </p>
+        <div class="images-container">
+          {{#each pages.rooms.room-types}}
+            <img src="{{images.[0]}}" alt="{{name}}" class="c-image">
+          {{/each}}
+        </div>   
       </div>
-      <div class="images-container">
-        <img src="img/deluxeRoom-2.jpg" alt="" class="c-image">
-        <img src="img/deluxeFamilyRoom-2.jpg" alt="" class="c-image">
-        <img src="img/deluxeSuite-2.jpg" alt="" class="c-image">
-      </div>   
   </div>
   
-  <div class="content-group pure-g blue-back ">
+  <div class="content-group pure-g">
     <div class="c-headline pure-u-1 pure-u-lg-1-4">
       <p class="c-headline-1">Location</p>
       <p class="c-headline-2"></p>
+      <p class="view-more">
+        <a href="{{general.gmap-url}}" data-linkto="{{general.gmap-url}}">view map</a>
+      </p>
     </div>
     <div class="c-content-text pure-u-1 pure-u-lg-3-4">
       <span class="locationMap">
@@ -42,12 +46,12 @@
     </div>
   </div>
   
-  <div class="content-group pure-g extra-padding-bottom">
+  <!-- <div class="content-group pure-g extra-padding-bottom">
     <div class="c-headline pure-u-1 pure-u-lg-1-4">
-      <p class="c-headline-1">
-        Amenities
-      </p>
-      <p class="c-headline-2">
+      <p class="c-headline-1">Amenities</p>
+      <p class="c-headline-2"></p>
+      <p class="view-more">
+        <a href="#" data-linkto="#">view amenities</a>
       </p>
     </div>
     <div class="c-content-text pure-u-1 pure-u-lg-3-4">
@@ -56,5 +60,34 @@
       </p>
     </div>
   </div>
+   -->
+  
+  <div class="content-group pure-g extra-padding-bottom">
+    <div class="c-headline pure-u-1 pure-u-lg-1-4">
+      <p class="c-headline-1">Reviews</p>
+      <p class="c-headline-2"></p>
+      <!-- <p class="view-more">
+        <a href="#" data-linkto="#">see all</a>
+      </p> -->
+    </div>
+    <div class="c-content-text pure-u-1 pure-u-lg-3-4">
+      <div class="reviews-grid">
+        {{#each reviews}}
+            <div class="agg-review" data-linkto="{{review-link}}">
+              <div class="agg-review--score">
+                <span>{{agg-score}}<span class='agg-review--score-denom'>/ {{score-denominator}}</span></span>
+              </div>
+              <p class="agg-review--review-count">Scored from {{review-count}} reviews</p> 
+              <span class="reviewer-logo">
+                <a href="{{review-link}}">
+                  <img src="{{logo-src}}" alt="{{reviewer}} logo">
+                </a>
+              </span>
+            </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+
   
 </div>

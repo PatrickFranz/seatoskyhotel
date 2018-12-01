@@ -34,7 +34,6 @@
       {"item": "rooms", "linkTo": "/rooms"},
       {"item": "facilities", "linkTo": "/facilities"},
       {"item": "gallery", "linkTo": "/gallery"},
-      {"item": "attractions", "linkTo": "/attractions"},
       {"item": "beer & wine store", "linkTo": "/bwstore"},
       {"item": "contact us", "linkTo": "/contact"}
     ]
@@ -49,6 +48,33 @@
     ],
     "submit-btn-text": "Search"
   },
+
+  "reviews": [
+    {
+      "reviewer": "booking.com",
+      "agg-score": 7.9,
+      "score-denominator": 10,
+      "review-count": "321",
+      "review-link": "https://www.booking.com/hotel/ca/sea-to-sky-and-conference-centre.html",
+      "logo-src": "img/bookingcom.png"
+    },
+    {
+      "reviewer": "tripadvisor.com",
+      "agg-score": 3.5,
+      "score-denominator": 5,
+      "review-count": "122",
+      "review-link": "https://www.tripadvisor.com/Hotel_Review-g181771-d599177-Reviews-Sea_to_Sky_Hotel_and_Conference_Centre-Squamish_British_Columbia.html",
+      "logo-src": "img/logo-tripadvisor.png"
+    },
+    {
+      "reviewer": "expedia.com",
+      "agg-score": 3.8,
+      "score-denominator": 5,
+      "review-count": "382",
+      "review-link": "https://www.expedia.com/Squamish-Hotels-Sea-To-Sky-Hotel-Conference-Centre.h11270.Hotel-Reviews",
+      "logo-src": "img/logo-expedia-1.jpg"
+    }
+  ],
 
   "footer":{
     "links": [
@@ -111,7 +137,7 @@
         {
           "name": "deluxe room",
           "desc": "300 SQ/FT. Deluxe room with Two Queen beds with private balcony, 37'' LCD screen television with premium cable channels, microwave, mini- refrigerator, desk/work space",
-          "images":["img/room-holder-1.jpg"],
+          "images":["img/deluxeRoom-3.jpg"],
           "features": [
             {
               "feature": "Max Guests",
@@ -128,7 +154,7 @@
         {
           "name": "deluxe family room",
           "desc": "380 SQ/FT. Deluxe Family room with Two Queen/One King Bed, private balcony, 37” LCD screen television with premium cable channels, microwave, mini- refrigerator, desk/work space, AM/FM clock radio, air-conditioning, coffee maker, hair dryer, iron and ironing board, complimentary wireless internet and parking.",
-          "images":["img/room-holder-1.jpg"],
+          "images":["img/deluxeFamilyRoom-1.jpg"],
           "features": [
             {
               "feature": "Max Guests",
@@ -145,7 +171,7 @@
         {
           "name": "deluxe one bedroom suite",
           "desc": "600 SQ/FT. Deluxe suite with large sitting area, 37” LCD television, one King bed, one separate bedroom with one Queen bed with 32” LCD television. Private balcony, microwave, mini- refrigerator, desk/work space, AM/FM clock radio, air-conditioning, coffee maker, hair dryer, iron and ironing board, complimentary wireless internet and parking.",
-          "images":["img/room-holder-1.jpg"],
+          "images":["img/deluxeSuite-1.jpg"],
           "features": [
             {
               "feature": "Max Guests",
@@ -245,36 +271,37 @@
         }
       ]
     },
-    "attractions":{
-      "page-name": "attractions",
-      "page-desc-1": "Squamish attractions",
-      "page-desc-2":"",
-      "attraction-arr":[
+    "bwstore":{
+      "page-name": "beer & wine store",
+      "page-desc-1": "Squamish's premier Beer & Wine shop",
+      "page-desc-2":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ipsum nobis perspiciatis architecto corporis. Est modi repudiandae vel dicta sapiente rem soluta tempora nulla, illum, iure iste exercitationem quidem perferendis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae sequi nemo delectus, deleniti officiis exercitationem esse vitae optio necessitatibus cum, ea modi molestiae temporibus dolor facilis voluptatum ratione commodi? Explicabo? <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque repellat hic fugit, voluptatibus, iure culpa id</p>",
+      "bw-subs": [
         {
-          "title": "",
-          "catergory": "",
-          "desc": "",
-          "image": "",
-          "link": ""
+          "title": "Premier Beer & Wine Store",
+          "image-src": "img/BWStore-cover-v2.png",
+          "desc": "The Sea to Sky Beer and Wine Store is nestled in the Garibaldi Provincial Park on the Sea to Sky Hwy, a few minutes north of Squamish. We are the premier destination for <strong>specialty wines</strong>, <strong>craft</strong>, local and import <strong>ales and lagers</strong>, and <strong>preferred spirits</strong>."
+        }, 
+        {
+          "title": "Wine",
+          "image-src": "img/BWStore-wine-1.jpg",
+          "desc": "We have a large BC Wine selection, including fine exclusive VQA, specialty and organic wines from Okanagan boutique wineries. We've listened to you and strive to provide amazing selections of hard-to-find and preferred favorites for your enjoyment and pleasure."
         },
         {
-          "title": "",
-          "catergory": "",
-          "desc": "",
-          "image": "",
-          "link": ""
+          "title": "Spirits",
+          "image-src": "img/BWStore-spirits-1.jpg",
+          "desc": "We are not just a beer and wine store. We carry a wide selection of distilled spirits as well. Our selection includes many premier and upscale spirits."
         }
       ]
     },
-    "bwstore":{
-      "page-name": "beer & wine store",
-      "page-desc-1": "Beer & Wime Store",
-      "page-desc-2":""
-    },
+
     "contactus":{
       "page-name": "contact us",
-      "page-desc-1": "How to reach us",
-      "page-desc-2":""
+      "page-desc-1": "If you have questions, concerns or comments you'd like to share with us please don't hesitate to contact us through one of the channels here.",
+      "page-desc-2":"",
+      "form-headline":"Question/Feedback Form",
+      "form-desc": "Your questions and feedback are extremely important to us. We will respond to your questions and comments as quickly as we can.",
+      "contact-headline": "Get in touch",
+      "contact-desc": "We are also available by phone, mail, or in person."
     }
   } 
 }

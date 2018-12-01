@@ -32,3 +32,54 @@ i{
   @extend .btn-pill;
   padding: 15px 25px;
 }
+//BTN END
+
+// Review cards
+.reviews-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 3rem;
+
+  .agg-review{
+    display: grid;
+    position: relative;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    border: $border-style $grayBack; 
+    border-radius: $border-radius;
+    padding: 1rem;
+    cursor: pointer;
+
+    &--score{
+      display: grid;
+      align-content: center;
+      justify-self: center;
+      border-radius: 50%;
+      background: $booking-blue;
+      font-size: 3rem;
+      padding: 0 1rem;
+      margin: 0;
+      height: 10rem;
+      width: 10rem;
+
+      &-denom{
+        font-size: 1.2rem;
+      }
+    }
+
+    &--review-count{
+      margin: 2px 0 10px;
+      font-size: 0.9rem;
+      color: lighten($black-text, 20%);;
+      text-transform: uppercase;
+    }
+    .reviewer-logo{
+      display: grid;
+      height: 85px;
+      align-content: center;
+      img{
+      }
+    }
+  }
+}
