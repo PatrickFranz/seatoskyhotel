@@ -46,8 +46,7 @@ function init(){
           closeModal()
         }
         if(routes[linkto]){
-          history.pushState(null, null,linkto);
-          showContent(routes[linkto]);
+          showContent(linkto);
         } else if(linkto.match(re_url)){
           window.open(linkto);
         }
@@ -64,8 +63,8 @@ function init(){
     });
   }
   
-  function showContent(page=routes[window.location.pathname]){
-    fetch(page)
+  function showContent(page=window.location.pathname || "/"){
+    fetch(routes[page])
     .then(result => result.text())
     .then(html_src => {
       if(!pageData){
@@ -73,8 +72,9 @@ function init(){
         } else {
             const htmlTemplate = Handlebars.compile(html_src)
             hbsContentContainer.innerHTML = htmlTemplate(pageData);
+            history.pushState(null, null, page);
             //Run any page specific JS
-            switch(page){
+            switch(routes[page]){
               case("gallery.html"):
                 loadGallery(); 
                 break;

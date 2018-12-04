@@ -80,7 +80,11 @@
                 </span>
               </div>
               <div class="header-right pure-u-3-4 pure-u-lg-1-2">
-                <span class='phone-number-text'><i class="fas fa-phone fa-flip-horizontal"></i>&nbsp;{{general.phone-number}}</span>
+                <span class='phone-number-text'>
+                  <a href="tel:{{general.toll-free-phone-number}}">
+                    <i class="fas fa-phone fa-flip-horizontal"></i>{{general.toll-free-phone-number}}
+                  </a>
+                </span>
                 <span class='text-buttons'>
                   <button class='menu-btn btn-pill-md'><i class="fas fa-bars"></i><span>{{headerMenu.menuText}}</span></button>
                   <span id="google_translate_element_text"></span>
@@ -111,18 +115,6 @@
       </script>
     </div>
 
-      <!-- Blank content block to use for new pages
-        <div class="content-container">
-          <div class="content-group pure-g">
-            <div class="c-headline pure-u-1-4">
-              <p class="c-headline-1">{{headline1}}</p>
-              <p class="c-headline-2">{{headline2}}</p>
-            </div>
-            <div class="c-content-text pure-u-3-4">
-              {{!content here}}
-            </div>
-          </div>
-        </div> -->
     
     <div class="hbs-main-content">
       <script id='hbs_body' type="x-handlebars-template"></script>
@@ -152,7 +144,7 @@
                     <p>{{general.city}}, {{general.prov-full}}</p>
                     <p>{{general.country}}</p>
                     <p>{{general.postal}}</p>
-                    <p>{{general.email}}</p>
+                    <p><a href="mailto:{{general.email}}">{{general.email}}</a></p>
                   </div>
                 </div>
               </div>

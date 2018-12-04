@@ -14,7 +14,6 @@
   $booking-blue: #00a1df;
 
   $border-style: 3px solid;
-
   $border-radius: 5px;
 
   *{
@@ -31,4 +30,8 @@
   a{
     text-decoration: none;
     color: lighten($black-text, 10%);
+
+    &:hover{
+      text-decoration: underline;
+    }
   }

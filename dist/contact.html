@@ -11,9 +11,9 @@
         </div> 
       </div>
       <div class="pure-u-1 pure-u-lg-2-3">  
-        <div class="sub-section">
+        <div class="contact-form sub-section">
             <p class="s-headline-1">{{{form-headline}}}</p>
-            <div class="description">
+            <div class="description"> 
               <p class='desc'>{{form-desc}}</p>
             </div>
           <form class="pure-form pure-form-stacked">
@@ -23,6 +23,7 @@
               <input class='pure-input-2-3' type="tel" placeholder="Phone">
               <input class='pure-input-2-3' type="text" placeholder="Reference number">
               <textarea class='pure-input-2-3' name="" id="" cols="30" rows="10" placeholder="Question or Feedback"></textarea>
+              <button type="submit" class="pure-button pure-button-primary">Submit</button>
             </fieldset>
           </form>
         
@@ -32,18 +33,33 @@
             <div class="description">
               <p class='desc'>{{contact-desc}}</p>
             </div>
-            <div class="contact-info">
-              <p class='phone-number-text'>
-                <a href="tel:{{../general.toll-free-phone-number}}">{{../general.toll-free-phone-number}}</a>
-              </p>
-              <p class='phone-number-text'>
-                <a href="tel:{{../general.phone-number}}">{{../general.phone-number}}</a>
-              </p>
-              <p>{{../general.address-1}}</p>
-              <p>{{../general.city}}, {{../general.prov-full}}</p>
-              <p>{{../general.country}}</p>
-              <p>{{../general.postal}}</p>
-              <p>{{../general.email}}</p>
+            <div class="contact-info pills">
+              <div class="pill">
+                <div class="icon"><img src="img/ico-phone-1.png" alt=""></div>
+                <div class="pill-data">
+                  <p class='phone-number-text'>
+                    <a href="tel:{{../general.toll-free-phone-number}}">{{../general.toll-free-phone-number}}</a>
+                  </p>
+                  <p class='phone-number-text'>
+                    <a href="tel:{{../general.phone-number}}">{{../general.phone-number}}</a>
+                  </p>
+                </div>
+              </div>
+              <div class="pill">
+                <div class="icon"><img src="img/ico-address-1.png" alt=""></div>
+                <div class="pill-data">
+                  <p>{{../general.address-1}}</p>
+                  <p>{{../general.city}}, {{../general.prov-full}}</p>
+                  <p>{{../general.country}}</p>
+                  <p>{{../general.postal}}</p>
+                </div>
+              </div>
+              <div class="pill">
+                <div class="icon"><img src="img/ico-email-1.png" alt=""></div>
+                <div class="pill-data">
+                  <p><a href="mailto:{{../general.email}}">{{../general.email}}</a></p>
+                </div>
+              </div>
             </div>
         </div>
         

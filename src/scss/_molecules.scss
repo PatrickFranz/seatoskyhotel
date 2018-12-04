@@ -78,8 +78,46 @@ i{
       display: grid;
       height: 85px;
       align-content: center;
-      img{
-      }
     }
   }
 }
+
+  //Contact Pills
+  .pills{
+    display: grid;
+    grid-gap: 1rem;
+    .pill{
+      display: grid;
+      grid-template-columns: 1fr 9fr;
+      align-items: center;
+      border: $border-style $grayBack;
+      border-radius: $border-radius;
+      padding: 1rem;
+      grid-gap: 2rem;
+
+      .icon{
+        img{
+          max-width: 75px;
+          @media (max-width: 425px) {
+            max-width: 25px;
+          }
+        }
+      }
+
+      .pill-data{
+        p{
+          padding: 0;
+          margin: 0;
+          font-size: 1.2rem;
+          font-weight: 700;
+          
+          @media (max-width: 425px){
+            font-size: 0.9rem;
+            font-weight: 700;
+
+          }
+        }
+      }
+      
+    }
+  }
