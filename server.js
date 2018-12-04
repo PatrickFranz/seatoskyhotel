@@ -8,12 +8,16 @@ app.use(express.static(__dirname + '/dist'));
 
 // Always send index.html
 function sendIndex(req, res, next) {
-  console.log(__dirname);
-  res.sendfile('index.html', { root: __dirname + "/dist/"});
+  res.sendfile('index.html', { root: __dirname + "/"});
 }
 
-app.all('/*', sendIndex);
-
-app.listen(port, function(){
+// app.get('/*', function(req, res) {
+  //   res.sendFile('path to index.html');
+  // })
+  
+  app.all('/*', sendIndex);
+  
+  app.listen(port, function(){
+  console.log(__dirname);
   console.log("Server running on " + port);
 });
