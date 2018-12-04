@@ -8,7 +8,7 @@ app.use(express.static(__dirname + '/dist'));
 
 // Always send index.html
 function sendIndex(req, res, next) {
-  res.sendfile('index.html', { root: __dirname + "/"});
+  res.sendfile('index.html', { root: __dirname + "/dist/"});
 }
 
 // app.get('/*', function(req, res) {
