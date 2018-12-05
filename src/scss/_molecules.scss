@@ -78,6 +78,9 @@ i{
       display: grid;
       height: 85px;
       align-content: center;
+      img{
+        max-width: 100%;
+      }
     }
   }
 }
