@@ -79,16 +79,8 @@
   "footer":{
     "links": [
       {
-        "text": "sitemap",
-        "url": "/sitemap"
-      },
-      {
         "text": "privacy policy",
         "url": "/privacy"
-      },
-      {
-        "text": "cookie notice",
-        "url": "/cookie_notice"
       }
     ],
 

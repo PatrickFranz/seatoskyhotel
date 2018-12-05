@@ -11,7 +11,7 @@ function init(){
     "/home": "home.html",
     "/rooms":"rooms.html",
     "/facilities":"facilities.html",
-    "/sitemap":"sitemap.html",
+    "/privacy":"privacy.html",
     "/gallery":"gallery.html",
     "/attractions":"attractions.html",
     "/bwstore":"bwstore.html",
@@ -73,6 +73,7 @@ function init(){
             const htmlTemplate = Handlebars.compile(html_src)
             hbsContentContainer.innerHTML = htmlTemplate(pageData);
             history.pushState(null, null, page);
+            window.scrollTo({top: 400});
             //Run any page specific JS
             switch(routes[page]){
               case("gallery.html"):
