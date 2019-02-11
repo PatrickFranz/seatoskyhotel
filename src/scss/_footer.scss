@@ -49,6 +49,9 @@ footer{
 
     .footer-links{
       text-transform: capitalize;
+      #plemx-root .weather-button {
+        margin-left: 20px !important;
+      }
     }
 
     @media(max-width:960px){

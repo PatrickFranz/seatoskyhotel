@@ -117,19 +117,19 @@
   "pages": {
     "home":{
       "page-name": "home",
-      "page-desc-1": "All of our 50 oversized guest rooms and suites are tastefully decorated with stunning mountain      views and are suitable for groups and events, business or pleasurable romantic getaway.",
-      "page-desc-2": "Many room amenities ensure a comfortable, relaxing and convenient stay. Each Sea to Sky Hotel      room includes:"
+      "page-desc-1": "The Sea to Sky Hotel is nestled in the Garibaldi Provincial Park on the seanic Sea to Sky Hwy. Located a few minutes north of downtown Squamish, the Sea to Sky Hotel is a 45 minute drive to both Whistler and Vancouver. Outside our doors are unlimited summer and winter activities and attractions.",
+      "page-desc-2": ""
     },
 
     "rooms":{
       "page-name": "rooms",
-      "page-desc-1": "All of our 50 oversized guest rooms and suites are tastefully decorated with stunning mountain      views and are suitable for groups and events, business or pleasurable romantic getaway.",
-      "page-desc-2": "Many room amenities ensure a comfortable, relaxing and convenient stay. Each Sea to Sky Hotel      room includes:",
-      "rooms-include-array": ["Microwave Oven", "Mini-Refrigerator", "AM/FM clock radio", "Air-conditioning", "Coffee/tea maker", "Hair dryer", "Iron and ironing board", "Free Wireless Internet", "Balcony with patio chairs"],
+      "page-desc-1": "All of our 50 oversized guest rooms and suites are tastefully decorated with stunning mountain views and are suitable for groups and events, business or pleasurable romantic getaway.",
+      "page-desc-2": "Many room amenities ensure a comfortable, relaxing and convenient stay. Each Sea to Sky Hotel room includes:",
+      "rooms-include-array": ["Microwave Oven", "Mini-Refrigerator", "Desk/Work Space", "Air-conditioning", "Coffee/tea maker", "Hair dryer", "Iron and ironing board", "Free Wireless Internet", "Balcony with patio chairs","37in LCD Screen TV"],
       "room-types": [
         {
           "name": "deluxe room",
-          "desc": "300 SQ/FT. Deluxe room with Two Queen beds with private balcony, 37'' LCD screen television with premium cable channels, microwave, mini- refrigerator, desk/work space",
+          "desc": "300 SQ/FT. Deluxe room with Two Queen beds with private balcony.",
           "images":["img/deluxeRoom-3.jpg"],
           "features": [
             {
@@ -146,7 +146,7 @@
         },
         {
           "name": "deluxe family room",
-          "desc": "380 SQ/FT. Deluxe Family room with Two Queen/One King Bed, private balcony, 37” LCD screen television with premium cable channels, microwave, mini- refrigerator, desk/work space, AM/FM clock radio, air-conditioning, coffee maker, hair dryer, iron and ironing board, complimentary wireless internet and parking.",
+          "desc": "380 SQ/FT. Deluxe Family room with Two Queen or One King Bed.",
           "images":["img/deluxeFamilyRoom-1.jpg"],
           "features": [
             {
@@ -163,7 +163,7 @@
         },
         {
           "name": "deluxe one bedroom suite",
-          "desc": "600 SQ/FT. Deluxe suite with large sitting area, 37” LCD television, one King bed, one separate bedroom with one Queen bed with 32” LCD television. Private balcony, microwave, mini- refrigerator, desk/work space, AM/FM clock radio, air-conditioning, coffee maker, hair dryer, iron and ironing board, complimentary wireless internet and parking.",
+          "desc": "600 SQ/FT. Deluxe suite with large sitting area, one King bed, one separate bedroom with one Queen bed.",
           "images":["img/deluxeSuite-1.jpg"],
           "features": [
             {
@@ -199,8 +199,8 @@
       ],
       "fac-meeting-subs": [
         {
-          "title": "Meetings",
-          "image-src": "img/meeting_room_1.jpg",
+          "title": "Fitness Centre",
+          "image-src": "https://placekitten.com/768/400",
           "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae doloribus quibusdam dignissimos, ipsa harum repellat doloremque eligendi eveniet facilis voluptatibus autem asperiores recusandae, nihil possimus at! Numquam quia consequatur culpa."
         }, 
         {
@@ -209,8 +209,8 @@
           "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, vero fuga quam consectetur perspiciatis labore incidunt unde beatae a ea laborum, fugiat itaque expedita dolore, adipisci magni? Consectetur, mollitia repellat!"
         }, 
         {
-          "title": "Weddings",
-          "image-src": "img/wedding-1.png",
+          "title": "Cold Beer, Wine & Liquor Store",
+          "image-src": "https://placekitten.com/768/400",
           "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore a, voluptatibus molestias voluptatum repellendus optio libero laboriosam quasi harum assumenda eligendi sit cupiditate nisi et dolorem, vitae obcaecati temporibus modi!"
         }
       ]
@@ -264,13 +264,7 @@
           "desc":"Banquet room with podium",
           "image-src":"img/banquet_room_4.jpg"
         },
-        {
-          "id": 2,
-          "title":"banquet room",
-          "category":"wedding",
-          "desc":"A memorable wedding reception in the heart of Sea to Sky country",
-          "image-src":"img/banquet_room_4.jpg"
-        },
+        
         {
           "id": 3,
           "title":"conference room",
@@ -284,13 +278,6 @@
           "category":"meeting",
           "desc":"The meeting room is large enough to accomodate big meetings",
           "image-src":"img/meeting_room_1.jpg"
-        },
-        {
-          "id": 5,
-          "title":"meeting room",
-          "category":"meeting",
-          "desc":"The perfect location for smaller meetings, with a professional feel",
-          "image-src":"img/meeting_room_2.jpg"
         },
         {
           "id": 6,

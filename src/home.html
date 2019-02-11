@@ -1,4 +1,5 @@
 <div class="content-container">
+  {{#with pages}}
   <div class="content-group pure-g">
     <div class="c-headline pure-u-1 pure-u-lg-1-4">
       <p class="c-headline-1">Sea to Sky</p>
@@ -6,9 +7,7 @@
     </div>
     <div class="c-content-text pure-u-1 pure-u-lg-3-4">
       <img width="100%" src="img/lobby-1.jpg" alt="Hotel Lobby">
-      <p>
-        The Sea to Sky Hotel is nestled in the Garibaldi Provincial Park on the Sea to Sky Hwy, a few minutes north of Squamish,  70 km away from Vancouver B.C. and 30 minutes drive to Whistler, the North America’s foremost all year-round mountain resort. Outside our doors are unlimited attractions, outdoor activities, and shopping.
-      </p>
+      <p>{{home.page-desc-1}}</p>
     </div>
   </div>
 
@@ -19,17 +18,15 @@
         <p class="view-more"><a href="/rooms" data-linkto="/rooms">view rooms</a></p>
       </div>
       <div class="c-content-text pure-u-1 pure-u-lg-3-4">
-        <p>
-            All of our 50 oversized guest rooms and suites are tastefully decorated with stunning mountain views and are suitable for groups and events, business or pleasurable romantic getaway.
-        </p>
+        <p>{{rooms.page-desc-1}}</p>
         <div class="images-container">
-          {{#each pages.rooms.room-types}}
+          {{#each rooms.room-types}}
             <img src="{{images.[0]}}" alt="{{name}}" class="c-image">
           {{/each}}
         </div>   
       </div>
   </div>
-  
+  {{/with}}
   <div class="content-group pure-g">
     <div class="c-headline pure-u-1 pure-u-lg-1-4">
       <p class="c-headline-1">Location</p>
@@ -74,5 +71,4 @@
     </div>
   </div>
 
-  
 </div>
