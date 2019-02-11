@@ -129,7 +129,7 @@
       "room-types": [
         {
           "name": "deluxe room",
-          "desc": "300 SQ/FT. Deluxe room with Two Queen beds with private balcony.",
+          "desc": "300 SQ/FT. Deluxe room with Two Queen beds.",
           "images":["img/deluxeRoom-3.jpg"],
           "features": [
             {
@@ -146,7 +146,7 @@
         },
         {
           "name": "deluxe family room",
-          "desc": "380 SQ/FT. Deluxe Family room with Two Queen or One King Bed.",
+          "desc": "380 SQ/FT. Deluxe Family room with Two Queen and One King Bed.",
           "images":["img/deluxeFamilyRoom-1.jpg"],
           "features": [
             {
