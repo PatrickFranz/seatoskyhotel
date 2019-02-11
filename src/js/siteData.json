@@ -32,7 +32,8 @@
     "menuItems" : [
       {"item": "home", "linkTo": "/home"},
       {"item": "rooms", "linkTo": "/rooms"},
-      {"item": "facilities", "linkTo": "/facilities"},
+      {"item": "amenities", "linkTo": "/amenities"},
+      {"item": "conference & events", "linkTo": "/conference"},
       {"item": "gallery", "linkTo": "/gallery"},
       {"item": "beer & wine store", "linkTo": "/bwstore"},
       {"item": "contact us", "linkTo": "/contact"}
@@ -180,14 +181,21 @@
       ]
     },
 
-    "facilities":{
-      "page-name": "facilities",
-      "page-desc-1": "<p>As the major Banquet & Conference Center in Squamish and the leading hotel location for upscale meetings in the Sea to Sky corridor, the Sea to Sky Hotel has raised the bar on meeting planner expectations.</p><p>From first class service to unmatched surroundings, we insure your next meeting will be a successful one.</p><p>The Sea to Sky Hotel Banquet and Conference Centre is located in the Garibaldi Provincial Park on the Sea to Sky Hwy, a few minutes north of Squamish and a 30 minutes drive to Whistler.</p>",
-      "page-desc-2": "This Lodging Facility offers 7,200 square feet of the most inviting meeting space in the Squamish area:",
+    "amenities":{
+      "page-name": "anemities",
+      "page-desc-1": "<p>The Sea To Sky Hotel offers an array of amenities that ensure convenience as well as luxury.</p><p>Along with well-appointed guest rooms and suites, the Sea to Sky Hotel offers guests:</p>",
+      "page-desc-2": "",
       "fac-features": [
-        "Four meeting rooms including the Sea to Sky Ballroom accommodating over 200 guests.",
-        "Complimentary wireless access in all meeting rooms and lobby.",
-        "24-hours front desk service."
+        "Fitness Centre",
+        "Conference and Wedding facilites",
+        "Cold Beer/Wine and Liquor Store",
+        "In-Room massage with <a href='www.natureswaymassage.ca' target='_blank'>Natures Way Mobile Massage</a>",
+        "Free wireless Internet through-out the hotel",
+        "24-hour front desk service",
+        "100% Smoke-Free",
+        "Playpens available",
+        "Accessible rooms",
+        "Motor coach parking available" 
       ],
       "fac-meeting-subs": [
         {
@@ -197,6 +205,36 @@
         }, 
         {
           "title": "Conferences",
+          "image-src": "img/conference-1.jpg",
+          "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, vero fuga quam consectetur perspiciatis labore incidunt unde beatae a ea laborum, fugiat itaque expedita dolore, adipisci magni? Consectetur, mollitia repellat!"
+        }, 
+        {
+          "title": "Weddings",
+          "image-src": "img/wedding-1.png",
+          "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore a, voluptatibus molestias voluptatum repellendus optio libero laboriosam quasi harum assumenda eligendi sit cupiditate nisi et dolorem, vitae obcaecati temporibus modi!"
+        }
+      ]
+    },
+
+    "conference":{
+      "page-name": "conferences & events",
+      "page-desc-1": "<p>As a major Banquet and Conference Centre in Squamish, the Sea to Sky Hotel offers excellent service with over 6500 square feet of event space</p>",
+      "page-desc-2": "",
+      "fac-features": [
+        "3 Meeting Rooms including The Sea to Sky Ballroom",
+        "Complimentary wireless Internet access",
+        "24-hour front desk service",
+        "Accessible rooms",
+        "Motor coach parking available" 
+      ],
+      "fac-meeting-subs": [
+        {
+          "title": "Meetings",
+          "image-src": "img/meeting_room_1.jpg",
+          "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae doloribus quibusdam dignissimos, ipsa harum repellat doloremque eligendi eveniet facilis voluptatibus autem asperiores recusandae, nihil possimus at! Numquam quia consequatur culpa."
+        }, 
+        {
+          "title": "Functions",
           "image-src": "img/conference-1.jpg",
           "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, vero fuga quam consectetur perspiciatis labore incidunt unde beatae a ea laborum, fugiat itaque expedita dolore, adipisci magni? Consectetur, mollitia repellat!"
         }, 

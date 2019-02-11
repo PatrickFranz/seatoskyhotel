@@ -14,6 +14,4 @@ function sendIndex(req, res, next) {
 app.all('/*', sendIndex);
   
 app.listen(port, function(){
-  console.log(__dirname);
-  console.log("Server running on " + port);
 });
