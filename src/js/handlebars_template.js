@@ -41,7 +41,10 @@ Handlebars.registerHelper('getDate', (offset=0) => {
 });
 
 Handlebars.registerHelper('showModal', (options) => {
-  console.log(options.fn());
   return options.fn(this)
 });
 
+Handlebars.registerHelper( 'getRandomImage', (arr) => {
+  return arr[(Math.floor(Math.random() * arr.length))].src
+  
+});

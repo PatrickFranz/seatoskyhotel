@@ -2,7 +2,8 @@ footer{
   width: 100vw;
   color: $white;
   position: relative;
-  top: -20px;  
+  top: -20px;
+  z-index: -1;
   
   .footer-content{
     width: 100vw;

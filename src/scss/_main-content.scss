@@ -1,9 +1,10 @@
 .content-container{  
   width: 100vw;
+  margin-top: -100px;
   
   .content-group{
     width: 90vw;
-    margin: 0 auto;
+    margin: auto auto;
     padding: 2rem 3rem;
     line-height: 1.75;
     background: $white;

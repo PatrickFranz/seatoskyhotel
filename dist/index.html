@@ -42,7 +42,7 @@
   <body class='body'>
     <div class="hbs-header">   
       <script id='hbs_header' type="x-handlebars-template">
-        <div class="res-bar">
+        <!-- <div class="res-bar">
             <div class="res-container pure-g">
               <div class="date-finder pure-u-1">
                 <div class="pure-g">
@@ -75,7 +75,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
 
           <header class='header-container pure-g'>
             <div class="logo-bar pure-g">
@@ -116,10 +116,11 @@
           </div>
           <div class="carousel pure-u-1">
             <div class="image-container">
-              <img src="img/cloudyHoweSound-1-2.jpg" alt="Beautiful Howe Sound" />
+              <img src="{{getRandomImage hero-images}}" 
+                   alt="Beautiful Squamish" />
             </div>
           </div>
-        </div>
+        </div>  
         
         </header>
       </script>
