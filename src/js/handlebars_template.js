@@ -44,7 +44,10 @@ Handlebars.registerHelper('showModal', (options) => {
   return options.fn(this)
 });
 
+// Expects an array of objects. ie.
+// [ {"src": "img/hero-squamish-1-lg.jpg", "desc": "Overlooking Howe Sound"} ]
 Handlebars.registerHelper( 'getRandomImage', (arr) => {
-  return arr[(Math.floor(Math.random() * arr.length))].src
+  const imgObject =  arr[(Math.floor(Math.random() * arr.length))]
+  return `<img src="${imgObject.src}" alt="${imgObject.desc}"/>`
   
 });

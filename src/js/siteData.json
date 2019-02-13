@@ -29,9 +29,9 @@
 
   "hero-images": [
     {"src": "img/hero-squamish-1-lg.jpg", "desc": "Overlooking Howe Sound"},
-    {"src": "img/hero-squamish-2-lg.jpg", "desc": "2"},
-    {"src": "img/hero-squamish-3-lg.jpg", "desc": "3"},
-    {"src": "img/hero-squamish-5-lg.jpg", "desc": "5"}
+    {"src": "img/hero-squamish-2-lg.jpg", "desc": "Clouds over Howe Sound"},
+    {"src": "img/hero-squamish-3-lg.jpg", "desc": "Rocky beach"},
+    {"src": "img/hero-squamish-5-lg.jpg", "desc": "Island sunset"}
   ],
 
   "nav": {
