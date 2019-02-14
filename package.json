@@ -12,7 +12,7 @@
     "build-task:mv-root": "copyfiles -af ./* dist/",
     "sass:build": "npm-run-all -p build-task:*",
     "sass:watch": "chokidar 'src/**/*' -c 'npm run sass:build'",
-    "serve": "browser-sync start -s 'dist' -f 'src' --no-notify --host $LOCAL_IP --port 9000 --reload-delay 4000 --single true",
+    "serve": "browser-sync start -s 'dist' -f 'src' --no-notify --host $LOCAL_IP --port 9001 --reload-delay 4000 --single true",
     "dev": "npm-run-all -p serve sass:*",
     "clean": "rm dist/* -rf"
   },

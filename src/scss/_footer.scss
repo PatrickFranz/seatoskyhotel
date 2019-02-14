@@ -1,11 +1,11 @@
 footer{
-  width: 100vw;
   color: $white;
   position: relative;
   top: -20px;
-  z-index: -1;
+  width: 100vw;
   
   .footer-content{
+    position: relative;
     width: 100vw;
     background: $black;
     margin: 0 auto;
