@@ -14,6 +14,10 @@
         gtag('config', 'UA-130489238-1');
       </script>
     <!-- End Google Analytics -->
+
+    <script src="js/pace.js"></script>
+    <link href="css/pace_theme_minimal.css" rel="stylesheet"/>
+
     <link rel="icon" 
         type="image/png" 
         href="img/favicon.ico">
@@ -91,22 +95,29 @@
               </div>
               <div class="header-right pure-u-3-4 pure-u-lg-1-2">
                 <div>
-                  <span class='phone-number-text'>
-                    <a href="tel:{{general.toll-free-phone-number}}">
-                      <i class="fas fa-phone fa-flip-horizontal"></i>{{general.toll-free-phone-number}}
-                    </a>
-                  </span>
                   
-                  <span class='text-buttons'>
-                    <button class='menu-btn btn-pill-md'>
-                      <i class="fas fa-bars"></i><span>{{headerMenu.menuText}}</span>
-                    </button>
-                    <span id="google_translate_element_text"></span>
+                  
+                  
+                  <button class='menu-btn btn-pill-md'>
+                    <i class="fas fa-bars"></i><span>{{headerMenu.menuText}}</span>
+                  </button>
+
+                  <span id="google_translate_element_text"></span>
+
+                  <a href="https://reservations.seatoskyhotel.com/" 
+                     target="_blank">
                     <button class='book-btn btn-pill-md'>
                       <i class="fa fa-hotel"></i>
                         <span>{{headerMenu.bookRoomText}}</span>
                     </button>
-                  </span>
+                  </a>
+                </div>
+                <div>
+                  <span class='phone-number-text'>
+                      <a href="tel:{{general.toll-free-phone-number}}">
+                        <i class="fas fa-phone fa-flip-horizontal"></i>{{general.toll-free-phone-number}}
+                      </a>
+                    </span>
                 </div>
               </div>
           

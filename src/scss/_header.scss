@@ -55,7 +55,11 @@
     font-size: 1rem;
     
     .book-btn{
-      display: initial;
+      color: $cta-text;
+      background-color: $cta-bg;
+      border-color: $cta-border;
+      padding-top: 10px;
+      padding-bottom: 10px;
     }
 
     .menu-btn{
@@ -87,12 +91,14 @@
     
     .phone-number-text{
       font-size: 1.1rem;
+      position: relative;
+      top: 15px;
       margin-right: 10px;
       font-weight: bold;
+      text-align: left;
       a{ color: $white; }
       i{ margin: 0 5px; }
     }
-    
   }
 }
 

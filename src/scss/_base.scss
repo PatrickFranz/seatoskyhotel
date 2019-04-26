@@ -13,6 +13,11 @@
   $grayContent: rgb(250, 250, 250);
   $booking-blue: #00a1df;
 
+  $cta-text: $white;
+  $cta-bg: rgb(255, 112, 67);
+  $cta-border: lighten($cta-bg, 2%);
+
+
   $border-style: 3px solid;
   $border-radius: 5px;
 
