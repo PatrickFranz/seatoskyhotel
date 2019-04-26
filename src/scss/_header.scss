@@ -55,7 +55,7 @@
     font-size: 1rem;
     
     .book-btn{
-      display: none;
+      display: initial;
     }
 
     .menu-btn{
@@ -74,7 +74,7 @@
     
     @media (max-width: 1024px) {
       .phone-number-text{
-        display: none;
+        display: initial;
       }
 
       .book-btn{

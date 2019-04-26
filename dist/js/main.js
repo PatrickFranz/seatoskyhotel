@@ -2,7 +2,7 @@
 function init(){
   const btnMenu = document.querySelector('.menu-btn');
   const btnReservation = document.querySelector('.book-btn');
-  const resBarElement = document.querySelector('.res-bar'); 
+  // const resBarElement = document.querySelector('.res-bar'); 
   const navNodes = document.querySelectorAll('.menu-item');
   const re_url = /\b(https?|ftp|file):\/\/[\-A-Za-z0-9+&@#\/%?=~_|!:,.;]*[\-A-Za-z0-9+&@#\/%=~_|]/
   let pageData = null;
@@ -33,7 +33,7 @@ function init(){
     }
   });
   
-  btnReservation.addEventListener('click', toggleResBar);
+  // btnReservation.addEventListener('click', toggleResBar);
   
   addNavListeners(navNodes);
 
@@ -41,7 +41,6 @@ function init(){
     nodes.forEach(el => {
       el.addEventListener('click', e => {
         const linkto = e.target.dataset.linkto || e.currentTarget.dataset.linkto
-        console.log(linkto)
         e.preventDefault();
         if(closeModal) {
           closeModal()
@@ -105,7 +104,7 @@ function init(){
     }));
   }
 
-  function setHeaderButtons(e){
+  function setHeaderButtons(){
     const buttonArray = [btnMenu, 
                          btnReservation, 
                          document.querySelector('.goog-te-menu-value')];
@@ -116,9 +115,9 @@ function init(){
     }
   }
 
-  function toggleResBar(e){
-    resBarElement.classList.toggle('show');
-  }
+  // function toggleResBar(e){
+  //   resBarElement.classList.toggle('show');
+  // }
 
   function toggleModal(json){ //content name is an object {'context': 'nav'}
   if(!pageData){
