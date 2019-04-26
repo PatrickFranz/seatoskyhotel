@@ -9,7 +9,6 @@
     "build-task:mv-images": "copyfiles -f src/img/* src/img/**/* dist/img",
     "build-task:mv-js": "copyfiles -f src/js/* dist/js",
     "build-task:mv-html": "copyfiles -f src/*.html dist/",
-    "build-task:mv-css": "copyfiles -f src/static/css/*.css dist/css",
     "build-task:mv-root": "copyfiles -af ./* dist/",
     "sass:build": "npm-run-all -p build-task:*",
     "sass:watch": "chokidar 'src/**/*' -c 'npm run sass:build'",
