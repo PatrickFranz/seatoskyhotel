@@ -32,6 +32,26 @@
         <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
       <!--<![endif]-->
     <!-- PureCSS END-->
+    <!-- Cookie acceptence code -->
+      <script src="js/cookieconsent.min.js"></script>
+      <script>
+        window.addEventListener("load", function(){
+        window.cookieconsent.initialise({
+          "palette": {
+            "popup": {
+              "background": "#000"
+            },
+            "button": {
+              "background": "rgb(255, 112, 67)",
+              "text": "#fff",
+              "border": "rgb(255, 112, 67)"
+            }
+          },
+          "position": "top",
+          "static": true
+        })});
+      </script>
+    <!-- END Cookie acceptence -->
 
     <link rel="stylesheet" 
           href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" 
